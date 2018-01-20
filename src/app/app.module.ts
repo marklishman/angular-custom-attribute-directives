@@ -10,17 +10,21 @@ import { TextHighlightComponent } from './text-highlight/text-highlight.componen
 import { TextHighlightDirective } from './text-highlight/text-highlight.directive';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { ConfirmDirective } from './confirm/confirm.directive';
+import { StatsComponent } from './stats/stats.component';
+import { StatsDirective } from './stats/stats.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SelectedComponent,
-    SelectedDirective,
-    TextHighlightComponent,
-    TextHighlightDirective,
     ConfirmComponent,
     ConfirmDirective,
+    TextHighlightComponent,
+    TextHighlightDirective,
+    SelectedComponent,
+    SelectedDirective,
+    StatsComponent,
+    StatsDirective,
   ],
   imports: [
     AppRoutingModule,
