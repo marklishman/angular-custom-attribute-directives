@@ -12,6 +12,8 @@ import { ConfirmComponent } from './confirm/confirm.component';
 import { ConfirmDirective } from './confirm/confirm.directive';
 import { StatsComponent } from './stats/stats.component';
 import { StatsDirective } from './stats/stats.directive';
+import { TocComponent } from './toc/toc.component';
+import { TocDirective } from './toc/toc.directive';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { StatsDirective } from './stats/stats.directive';
     SelectedDirective,
     StatsComponent,
     StatsDirective,
+    TocComponent,
+    TocDirective,
   ],
   imports: [
     AppRoutingModule,

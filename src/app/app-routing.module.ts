@@ -5,6 +5,7 @@ import { SelectedComponent } from './selected/selected.component';
 import { TextHighlightComponent } from './text-highlight/text-highlight.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { StatsComponent } from './stats/stats.component';
+import { TocComponent } from './toc/toc.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/selected', pathMatch: 'full'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'text-highlight', component: TextHighlightComponent},
   {path: 'confirm', component: ConfirmComponent},
   {path: 'stats', component: StatsComponent},
+  {path: 'toc', component: TocComponent},
 ];
 
 @NgModule({
