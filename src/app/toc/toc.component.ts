@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-toc',
   template: `
+    <header>Hover your mouse over the text above to see the TOC</header>
     <div appToc>
       <h1>first heading 1</h1>
       <h2>first heading 2</h2>
@@ -26,17 +27,11 @@ import { Component, OnInit } from '@angular/core';
       <h4>second heading 4</h4>
       <p>para ten</p>
     </div>
-    <footer>Hover your mouse over the text above to see the TOC</footer>
   `,
   styles: [`
     h1, h2, h3, h4, h5, h6, p {
       margin: 0;
       padding: 2px;
-    }
-    footer {
-      color: green;
-      font-size: 20px;
-      margin-top: 0;
     }
   `]
 })

@@ -14,6 +14,8 @@ import { StatsComponent } from './stats/stats.component';
 import { StatsDirective } from './stats/stats.directive';
 import { TocComponent } from './toc/toc.component';
 import { TocDirective } from './toc/toc.directive';
+import { TextSnippetComponent } from './text-snippets/text-snippets.component';
+import { TextSnippetDirective } from './text-snippets/text-snippets.directive';
 
 
 @NgModule({
@@ -21,12 +23,14 @@ import { TocDirective } from './toc/toc.directive';
     AppComponent,
     ConfirmComponent,
     ConfirmDirective,
-    TextHighlightComponent,
-    TextHighlightDirective,
     SelectedComponent,
     SelectedDirective,
     StatsComponent,
     StatsDirective,
+    TextHighlightComponent,
+    TextHighlightDirective,
+    TextSnippetComponent,
+    TextSnippetDirective,
     TocComponent,
     TocDirective,
   ],
