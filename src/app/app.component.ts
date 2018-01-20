@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <p>
+    <section>
       <a routerLink="/selected" routerLinkActive="disabled">Selected</a> |
       <a routerLink="/text-highlight" routerLinkActive="disabled">Text Highlight</a> |
       <a routerLink="/text-snippets" routerLinkActive="disabled">Text Snippet</a> |
@@ -14,9 +14,12 @@ import { Component } from '@angular/core';
       <a routerLink="/multi-choice" routerLinkActive="disabled">Multi-choice</a> |
       <a routerLink="/star-rating" routerLinkActive="disabled">Star Rating</a> |
       <a routerLink="/editable" routerLinkActive="disabled">Editable</a> |
-    </p>
+    </section>
     <router-outlet></router-outlet>`,
   styles: [`
+    section {
+      margin: 10px 0;
+    }
     .disabled {
       pointer-events: none;
       cursor: default;

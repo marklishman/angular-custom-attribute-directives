@@ -24,7 +24,8 @@ import { AnswerDirective } from './multi-choice/answer.directive';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { StarRatingDirective } from './star-rating/star-rating.directive';
 import { EditableComponent } from './editable/editable.component';
-import { EditableDirective } from './editable/editable.directive';
+import { EditableItemDirective } from './editable/editable-item.directive';
+import { EditableGroupDirective } from './editable/editable-group.directive';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { EditableDirective } from './editable/editable.directive';
     ConfirmComponent,
     ConfirmDirective,
     EditableComponent,
-    EditableDirective,
+    EditableItemDirective,
     GlossaryComponent,
     GlossaryDirective,
     MultiChoiceComponent,
@@ -51,6 +52,7 @@ import { EditableDirective } from './editable/editable.directive';
     TextSnippetDirective,
     TocComponent,
     TocDirective,
+    EditableGroupDirective,
   ],
   imports: [
     AppRoutingModule,
