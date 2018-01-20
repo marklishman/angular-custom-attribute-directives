@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     <p>
       <a routerLink="/selected" routerLinkActive="disabled">Selected</a> |
       <a routerLink="/text-highlight" routerLinkActive="disabled">Text Highlight</a> |
+      <a routerLink="/confirm" routerLinkActive="disabled">Confirm</a> |
     </p>
     <router-outlet></router-outlet>`,
   styles: [`

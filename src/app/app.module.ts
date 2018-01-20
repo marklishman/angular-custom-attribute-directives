@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SelectedComponent } from './selected/selected.component';
 import { TextHighlightComponent } from './text-highlight/text-highlight.component';
 import { TextHighlightDirective } from './text-highlight/text-highlight.directive';
+import { ConfirmComponent } from './confirm/confirm.component';
+import { ConfirmDirective } from './confirm/confirm.directive';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { TextHighlightDirective } from './text-highlight/text-highlight.directiv
     SelectedDirective,
     TextHighlightComponent,
     TextHighlightDirective,
+    ConfirmComponent,
+    ConfirmDirective,
   ],
   imports: [
     AppRoutingModule,
