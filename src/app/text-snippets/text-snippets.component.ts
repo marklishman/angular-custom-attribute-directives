@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-text-selector',
   template: `
     <div>
-      <header>Select some of the text below</header>
+      <header [hidden]="speech.snippets.length">Select some of the text below</header>
+      <header [hidden]="!speech.snippets.length">Select some more to keep adding to the list</header>
       <p appTextSelector #speech="appTextSelector">
         Didn’t see the first shark for about a half-hour. Tiger. 13-footer. You know how you know that in the water, Chief?
         You can tell by lookin’ from the dorsal to the tail. What we didn’t know, was that our bomb mission was so secret,

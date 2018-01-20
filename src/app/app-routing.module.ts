@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/selected', pathMatch: 'full'},
   {path: 'selected', component: SelectedComponent},
   {path: 'text-highlight', component: TextHighlightComponent},
-  {path: 'text-selector', component: TextSnippetComponent},
+  {path: 'text-snippets', component: TextSnippetComponent},
   {path: 'confirm', component: ConfirmComponent},
   {path: 'stats', component: StatsComponent},
   {path: 'toc', component: TocComponent},
