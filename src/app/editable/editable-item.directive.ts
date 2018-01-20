@@ -7,12 +7,13 @@ enum Mode {
 }
 
 @Directive({
-  selector: '[appEditableItem]'
+  selector: 'span [appEditableItem]'
 })
 export class EditableItemDirective implements OnInit {
 
   private mode: Mode = Mode.View;
   private input: HTMLInputElement;
+  private nativeElement: HTMLSpanElement;
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2,
@@ -21,6 +22,7 @@ export class EditableItemDirective implements OnInit {
     if (this.group) {
       this.group.items.push(this);
     }
+    this.nativeElement = this.elementRef.nativeElement;
   }
 
   ngOnInit(): void {
@@ -34,8 +36,8 @@ export class EditableItemDirective implements OnInit {
       return;
     }
     this.setInputValue();
-    this.renderer.setProperty(this.elementRef.nativeElement, 'innerText', '');
-    this.renderer.appendChild(this.elementRef.nativeElement, this.input);
+    this.renderer.setProperty(this.nativeElement, 'innerText', '');
+    this.renderer.appendChild(this.nativeElement, this.input);
 
     // const link = this.createLinkElement('Save');
     // this.renderer.appendChild(this.elementRef.nativeElement, link);
@@ -46,6 +48,10 @@ export class EditableItemDirective implements OnInit {
   @HostListener('keyup.enter')
   onReturn(): void {
     this.applicationRef.tick();
+    const textElement = this.renderer.createText(this.input.value);
+    this.renderer.removeChild(this.nativeElement, this.input);
+    this.renderer.appendChild(this.nativeElement, textElement);
+    this.mode = Mode.View;
   }
 
   get value() {
