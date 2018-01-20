@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnChanges, OnInit, Renderer2, SimpleChanges } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
 
 @Directive({
   selector: '[appTextHighlight]',
@@ -13,7 +13,6 @@ export class TextHighlightDirective implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     const text = this.elementRef.nativeElement.innerText;
     const searchTerm = new RegExp(this.textToHighlight, 'g');
     const color = this.highlightColor || 'yellow';

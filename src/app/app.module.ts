@@ -16,13 +16,23 @@ import { TocComponent } from './toc/toc.component';
 import { TocDirective } from './toc/toc.directive';
 import { TextSnippetComponent } from './text-snippets/text-snippets.component';
 import { TextSnippetDirective } from './text-snippets/text-snippets.directive';
+import { GlossaryComponent } from './glossary/glossary.component';
+import { GlossaryDirective } from './glossary/glossary.directive';
+import { MultiChoiceComponent } from './multi-choice/multi-choice.component';
+import { QuestionDirective } from './multi-choice/question.directive';
+import { AnswerDirective } from './multi-choice/answer.directive';
 
 
 @NgModule({
   declarations: [
+    AnswerDirective,
     AppComponent,
     ConfirmComponent,
     ConfirmDirective,
+    GlossaryComponent,
+    GlossaryDirective,
+    MultiChoiceComponent,
+    QuestionDirective,
     SelectedComponent,
     SelectedDirective,
     StatsComponent,
