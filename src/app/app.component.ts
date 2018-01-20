@@ -12,6 +12,8 @@ import { Component } from '@angular/core';
       <a routerLink="/toc" routerLinkActive="disabled">TOC</a> |
       <a routerLink="/glossary" routerLinkActive="disabled">Glossary</a> |
       <a routerLink="/multi-choice" routerLinkActive="disabled">Multi-choice</a> |
+      <a routerLink="/star-rating" routerLinkActive="disabled">Star Rating</a> |
+      <a routerLink="/editable" routerLinkActive="disabled">Editable</a> |
     </p>
     <router-outlet></router-outlet>`,
   styles: [`

@@ -21,6 +21,10 @@ import { GlossaryDirective } from './glossary/glossary.directive';
 import { MultiChoiceComponent } from './multi-choice/multi-choice.component';
 import { QuestionDirective } from './multi-choice/question.directive';
 import { AnswerDirective } from './multi-choice/answer.directive';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import { StarRatingDirective } from './star-rating/star-rating.directive';
+import { EditableComponent } from './editable/editable.component';
+import { EditableDirective } from './editable/editable.directive';
 
 
 @NgModule({
@@ -29,6 +33,8 @@ import { AnswerDirective } from './multi-choice/answer.directive';
     AppComponent,
     ConfirmComponent,
     ConfirmDirective,
+    EditableComponent,
+    EditableDirective,
     GlossaryComponent,
     GlossaryDirective,
     MultiChoiceComponent,
@@ -36,6 +42,8 @@ import { AnswerDirective } from './multi-choice/answer.directive';
     SelectedComponent,
     SelectedDirective,
     StatsComponent,
+    StarRatingComponent,
+    StarRatingDirective,
     StatsDirective,
     TextHighlightComponent,
     TextHighlightDirective,

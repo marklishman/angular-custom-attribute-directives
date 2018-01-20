@@ -9,6 +9,8 @@ import { TocComponent } from './toc/toc.component';
 import { TextSnippetComponent } from './text-snippets/text-snippets.component';
 import { GlossaryComponent } from './glossary/glossary.component';
 import { MultiChoiceComponent } from './multi-choice/multi-choice.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import { EditableComponent } from './editable/editable.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/selected', pathMatch: 'full'},
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path: 'toc', component: TocComponent},
   {path: 'glossary', component: GlossaryComponent},
   {path: 'multi-choice', component: MultiChoiceComponent},
+  {path: 'star-rating', component: StarRatingComponent},
+  {path: 'editable', component: EditableComponent},
 ];
 
 @NgModule({
