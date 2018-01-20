@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { SelectedComponent } from './directives/selected.component';
-import { TextHighlightComponent } from './directives/text-highlight.component';
+import { SelectedComponent } from './selected/selected.component';
+import { TextHighlightComponent } from './text-highlight/text-highlight.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/selected', pathMatch: 'full'},

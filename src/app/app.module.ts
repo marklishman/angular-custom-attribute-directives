@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SelectedDirective } from './directives/selected.directive';
+import { SelectedDirective } from './selected/selected.directive';
 import { AppRoutingModule } from './app-routing.module';
-import { SelectedComponent } from './directives/selected.component';
-import { TextHighlightComponent } from './directives/text-highlight.component';
-import { TextHighlightDirective } from './directives/text-highlight.directive';
+import { SelectedComponent } from './selected/selected.component';
+import { TextHighlightComponent } from './text-highlight/text-highlight.component';
+import { TextHighlightDirective } from './text-highlight/text-highlight.directive';
 
 
 @NgModule({
