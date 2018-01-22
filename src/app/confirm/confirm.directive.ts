@@ -5,11 +5,12 @@ import { Directive, HostListener, Input } from '@angular/core';
 })
 export class ConfirmDirective {
 
-  @Input('appConfirm') functionToRun = () => {};
+  @Input('appConfirm') message = 'Are you sure?';
+  @Input() functionToRun = () => {};
 
   @HostListener('click')
   confirm() {
-    if(window.confirm('Are you sure?')) {
+    if(window.confirm(this.message)) {
       this.functionToRun();
     }
   }

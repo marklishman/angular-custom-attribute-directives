@@ -5,18 +5,33 @@ import { Component } from '@angular/core';
   template: `
     <header>Click the button and link to see the confirmation message</header>
     <p>
-      <button [appConfirm]="setMessage('Button confirmed')">Do Something</button>
+      <button [appConfirm]="'Are you sure you want to change the color to blue?'"
+              [functionToRun]="setBoxColor('blue')"
+              [disabled]="boxColor==='blue'">
+        Blue
+      </button>
+      <button [appConfirm]="'Are you sure you want to change the color to red?'"
+              [functionToRun]="setBoxColor('red')"
+              [disabled]="boxColor==='red'">
+        Red
+      </button>
     </p>
-    <p>
-      <a [appConfirm]="setMessage('Link confirmed')" href="#/confirm">Click me</a>
-    </p>
-    <h3>{{message}}</h3>
-  `
+    <div [style.backgroundColor]="boxColor"
+         class="box">
+    </div>
+  `,
+  styles: [`
+    div.box {
+      height: 50px;
+      width: 210px;
+    }
+  `]
 })
 export class ConfirmComponent {
-  message: string;
+  boxColor = 'blue';
 
-  setMessage(message: string) {
-    return () => this.message = message;
+  setBoxColor(color: string) {
+    return () => this.boxColor = color;
   }
+
 }
