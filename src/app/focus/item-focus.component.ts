@@ -8,15 +8,7 @@ import { Component } from '@angular/core';
       <label>Two: <input type="text"></label>
       <label>Three: <input type="text"></label>
     </form>
-  `,
-  styles: [`
-    form {
-      padding: 10px;
-    }
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }`]
+  `
 })
 export class ItemFocusComponent {
 }
