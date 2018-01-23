@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { SelectedDirective } from './selected/selected.directive';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +25,10 @@ import { StarRatingDirective } from './star-rating/star-rating.directive';
 import { EditableComponent } from './editable/editable.component';
 import { EditableItemDirective } from './editable/editable-item.directive';
 import { EditableGroupDirective } from './editable/editable-group.directive';
+import { GroupFocusDirective } from './focus/group-focus.directive';
+import { ItemFocusDirective } from './focus/item-focus.directive';
+import { ItemFocusComponent } from './focus/item-focus.component';
+import { GroupFocusComponent } from './focus/group-focus.component';
 
 
 @NgModule({
@@ -35,9 +38,14 @@ import { EditableGroupDirective } from './editable/editable-group.directive';
     ConfirmComponent,
     ConfirmDirective,
     EditableComponent,
+    EditableGroupDirective,
     EditableItemDirective,
     GlossaryComponent,
     GlossaryDirective,
+    GroupFocusComponent,
+    GroupFocusDirective,
+    ItemFocusDirective,
+    ItemFocusComponent,
     MultiChoiceComponent,
     QuestionDirective,
     SelectedComponent,
@@ -52,7 +60,6 @@ import { EditableGroupDirective } from './editable/editable-group.directive';
     TextSnippetDirective,
     TocComponent,
     TocDirective,
-    EditableGroupDirective,
   ],
   imports: [
     AppRoutingModule,

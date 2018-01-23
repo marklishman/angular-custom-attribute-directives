@@ -11,6 +11,8 @@ import { GlossaryComponent } from './glossary/glossary.component';
 import { MultiChoiceComponent } from './multi-choice/multi-choice.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { EditableComponent } from './editable/editable.component';
+import { ItemFocusComponent } from './focus/item-focus.component';
+import { GroupFocusComponent } from './focus/group-focus.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/selected', pathMatch: 'full'},
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path: 'multi-choice', component: MultiChoiceComponent},
   {path: 'star-rating', component: StarRatingComponent},
   {path: 'editable', component: EditableComponent},
+  {path: 'item-focus', component: ItemFocusComponent},
+  {path: 'group-focus', component: GroupFocusComponent},
 ];
 
 @NgModule({
