@@ -17,9 +17,6 @@ import { TextSnippetComponent } from './text-snippets/text-snippets.component';
 import { TextSnippetDirective } from './text-snippets/text-snippets.directive';
 import { GlossaryComponent } from './glossary/glossary.component';
 import { GlossaryDirective } from './glossary/glossary.directive';
-import { MultiChoiceComponent } from './multi-choice/multi-choice.component';
-import { QuestionDirective } from './multi-choice/question.directive';
-import { AnswerDirective } from './multi-choice/answer.directive';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { StarRatingDirective } from './star-rating/star-rating.directive';
 import { EditableComponent } from './editable/editable.component';
@@ -33,7 +30,6 @@ import { GroupFocusComponent } from './focus/group-focus.component';
 
 @NgModule({
   declarations: [
-    AnswerDirective,
     AppComponent,
     ConfirmComponent,
     ConfirmDirective,
@@ -46,8 +42,6 @@ import { GroupFocusComponent } from './focus/group-focus.component';
     GroupFocusDirective,
     ItemFocusDirective,
     ItemFocusComponent,
-    MultiChoiceComponent,
-    QuestionDirective,
     SelectedComponent,
     SelectedDirective,
     StatsComponent,

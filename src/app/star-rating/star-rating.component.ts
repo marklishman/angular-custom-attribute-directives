@@ -4,14 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-star-rating',
   template: `
     <div class="container">
-      <div appStarRating>
-        <img src="/assets/images/shawshank.jpg" alt="shawshank redemption">
-      </div>
-      <div appStarRating>
-        <img src="/assets/images/godfather.jpg" alt="sgodfather">
-      </div>
-      <div appStarRating>
-        <img src="/assets/images/dark-knight.jpg" alt="dark knight">
+      <div appStarRating *ngFor="let movie of movies">
+        <img src="/assets/images/{{movie}}.jpg">
       </div>
     </div>
   `,
@@ -29,4 +23,10 @@ import { Component } from '@angular/core';
   `]
 })
 export class StarRatingComponent {
+
+  movies: string[] = [
+    'shawshank-redemption',
+    'the-godfather',
+    'the-dark-knight'
+  ];
 }
