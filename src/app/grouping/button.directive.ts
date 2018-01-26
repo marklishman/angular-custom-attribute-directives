@@ -1,19 +1,16 @@
-import { Directive, ElementRef, HostBinding, HostListener, Optional, Renderer2 } from '@angular/core';
-import { GroupComponent } from './group.component';
+import { Directive, HostBinding, HostListener, Optional } from '@angular/core';
 import { Selectable } from './Selectable';
-import { Subject } from 'rxjs/Subject';
 import { GroupDirective } from './group.directive';
 
 @Directive({
-  selector: 'button [appItem]'
+  selector: 'button [appItem]',
+  exportAs: 'appButtonItem'
 })
 export class ButtonDirective implements Selectable {
 
+  // TODO id from group?
   private static id = 0;
   private instanceId = ButtonDirective.id++;
-
-  // TODO notify
-  // private selectedEvent: Subject<number> = new Subject<number>();
 
   @HostBinding('class.selected')
   buttonSelected = false;
@@ -24,11 +21,9 @@ export class ButtonDirective implements Selectable {
     }
   }
 
-  @HostListener('click', ['$event.target'])
-  onClick(target: HTMLButtonElement) {
+  @HostListener('click')
+  onClick() {
     this.buttonSelected = !this.buttonSelected;
-    // this.selectedEvent.next(this.instanceId);
-
     if (this.group && this.buttonSelected) {
       this.group.itemSelected(this.instanceId);
     }
@@ -40,5 +35,9 @@ export class ButtonDirective implements Selectable {
 
   select(selected: boolean): void {
     this.buttonSelected = selected;
+  }
+
+  isSelected(): boolean {
+    return this.buttonSelected;
   }
 }

@@ -28,7 +28,7 @@ import { ItemFocusComponent } from './focus/item-focus.component';
 import { GroupFocusComponent } from './focus/group-focus.component';
 import { ButtonDirective } from './grouping/button.directive';
 import { GroupComponent } from './grouping/group.component';
-import { ItemDirective } from './grouping/item.directive';
+import { ParaDirective } from './grouping/para.directive';
 import { GroupDirective } from './grouping/group.directive';
 
 
@@ -60,7 +60,7 @@ import { GroupDirective } from './grouping/group.directive';
     TocDirective,
     ButtonDirective,
     GroupComponent,
-    ItemDirective,
+    ParaDirective,
     GroupDirective,
   ],
   imports: [

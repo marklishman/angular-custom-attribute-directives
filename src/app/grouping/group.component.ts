@@ -3,11 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-group',
   template: `
-    <p appGroup>
-      <button #bt1 appItem>one</button>
-      <button #bt1 appItem>two</button>
-      <button #bt1 appItem>three</button>
+    <p>
+      <button appItem #bt1="appButtonItem">one</button>
+      <button appItem #bt2="appButtonItem">two</button>
+      <button appItem #bt2="appButtonItem">three</button>
     </p>
+    <p appGroup [single]="true" #group="appGroup">
+      <button appItem>one</button>
+      <button appItem>two</button>
+      <button appItem>three</button>
+    </p>
+    <p>Selected items: {{group.selectedItems}}</p>
   `,
   styles: [`
     button {
