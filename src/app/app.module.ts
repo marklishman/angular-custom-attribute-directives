@@ -26,6 +26,10 @@ import { GroupFocusDirective } from './focus/group-focus.directive';
 import { ItemFocusDirective } from './focus/item-focus.directive';
 import { ItemFocusComponent } from './focus/item-focus.component';
 import { GroupFocusComponent } from './focus/group-focus.component';
+import { ButtonDirective } from './grouping/button.directive';
+import { GroupComponent } from './grouping/group.component';
+import { ItemDirective } from './grouping/item.directive';
+import { GroupDirective } from './grouping/group.directive';
 
 
 @NgModule({
@@ -54,6 +58,10 @@ import { GroupFocusComponent } from './focus/group-focus.component';
     TextSnippetDirective,
     TocComponent,
     TocDirective,
+    ButtonDirective,
+    GroupComponent,
+    ItemDirective,
+    GroupDirective,
   ],
   imports: [
     AppRoutingModule,

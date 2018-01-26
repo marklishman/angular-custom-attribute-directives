@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="container">
       <div appStarRating *ngFor="let movie of movies">
-        <img src="/assets/images/{{movie}}.jpg">
+        <img src="/angular-custom-attribute-directives/assets/images/{{movie}}.jpg">
       </div>
     </div>
   `,

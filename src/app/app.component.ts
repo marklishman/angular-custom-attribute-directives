@@ -15,6 +15,7 @@ import { Component } from '@angular/core';
       <a routerLink="/editable" routerLinkActive="disabled">Editable</a> |
       <a routerLink="/item-focus" routerLinkActive="disabled">Item Focus</a> |
       <a routerLink="/group-focus" routerLinkActive="disabled">Group Focus</a> |
+      <a routerLink="/group" routerLinkActive="disabled">Group</a> |
     </section>
     <router-outlet></router-outlet>`,
   styles: [`

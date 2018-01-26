@@ -12,6 +12,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
 import { EditableComponent } from './editable/editable.component';
 import { ItemFocusComponent } from './focus/item-focus.component';
 import { GroupFocusComponent } from './focus/group-focus.component';
+import { GroupComponent } from './grouping/group.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/selected', pathMatch: 'full'},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'editable', component: EditableComponent},
   {path: 'item-focus', component: ItemFocusComponent},
   {path: 'group-focus', component: GroupFocusComponent},
+  {path: 'group', component: GroupComponent},
 ];
 
 @NgModule({
