@@ -14,12 +14,17 @@ import { Component } from '@angular/core';
       Three: {{btn3.isSelected()}}
     </div>
     <hr>
-    <p><input #single (change)="0" type="checkbox">Single</p>
-    <p appGroup [single]="single.checked" #group="appGroup">
+    <div>
+      <label>
+        <input #single (change)="0" type="checkbox">
+        Single
+      </label>
+    </div>
+    <div appGroup [single]="single.checked" #group="appGroup">
       <button appItem>one</button>
       <button appItem>two</button>
       <button appItem>three</button>
-    </p>
+    </div>
     <p>Selected items: {{group.selectedItems}}</p>
   `,
   styles: [`
