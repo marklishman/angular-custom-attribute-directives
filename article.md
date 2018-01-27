@@ -49,7 +49,9 @@ This is because the first directive is binding to any `section` element with a `
 
 ---> container.directive.ts
 
-_Details about the host directive here_
+The `color` variable is used to specify the background color of the host, and is updated as the user enters (`mouseover`) and leaves (`mouseleave`) the container.
+
+The `onMouseClicks` supports several `@HostListener` decorators and uses the DOM `MouseEvent` object, which is passed in as a parameter, to distinguish between them.
 
 ### The Input Directive
 
@@ -57,5 +59,11 @@ The second directive will bind itself to any text input.
 
 ---> input.directive.ts
 
-_Details about the host directive here_
+The directive performs two actions. 
 
+Firstly, it adds a border around the active input field. The standard DOM `focus` and `blur` events set the `border` flag to determine the CSS border style to be used.
+
+Secondly the input fields are toggled between enabled and disabled when a `document:click` event is received. 
+This shows that directives can in fact handle events outside the host.
+
+_Note about the selectors. Use custom attributes for clarity._

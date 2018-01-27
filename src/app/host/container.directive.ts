@@ -25,7 +25,7 @@ export class ContainerDirective {
   @HostListener('click', ['$event'])
   @HostListener('dblclick', ['$event'])
   @HostListener('contextmenu', ['$event'])
-  private onMouseAction(event: MouseEvent) {
+  private onMouseClicks(event: MouseEvent) {
     if (event.type === 'click') {
       this.keepColor = true;
     } else if (event.type === 'dblclick') {

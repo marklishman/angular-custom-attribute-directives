@@ -5,40 +5,40 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 })
 export class InputDirective {
 
-  private _border: boolean;
-  private _disabled: boolean;
+  private border: boolean;
+  private disabled: boolean;
 
   @HostBinding('style.border')
-  private get border(): string {
-    return this._border ? '2px solid OrangeRed' : '';
+  private get borderStyle(): string {
+    return this.border ? '2px solid OrangeRed' : '';
   }
 
   @HostBinding('disabled')
-  private get disable(): boolean {
-    return this._disabled;
+  private get isDisabled(): boolean {
+    return this.disabled;
   }
 
   @HostListener('focus')
   private onClick() {
-    this._border = true;
+    this.border = true;
   }
 
   @HostListener('blur')
   private onBlur() {
-    this._border = false;
+    this.border = false;
   }
 
   @HostListener('keydown', ['$event'])
   private onKeyUp(event: KeyboardEvent) {
     if (event.key === 'Escape') {
-      this._border = false;
+      this.border = false;
     }
   }
 
   @HostListener('document:click', ['$event.target'])
   public onDocumentClick(target: HTMLElement) {
     if (target.id === 'disable') {
-      this._disabled = !this._disabled;
+      this.disabled = !this.disabled;
     }
   }
 }
