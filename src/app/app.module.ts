@@ -31,6 +31,9 @@ import { ParaDirective } from './grouping/para.directive';
 import { GroupDirective } from './grouping/group.directive';
 import { ToggleButtonComponent } from './toggle/toggle-button.component';
 import { ToggleButtonDirective } from './toggle/toggle.directive';
+import { HostComponent } from './host/host.component';
+import { InputHostDirective } from './host/input-host.directive';
+import { DivHostDirective } from './host/div-host.directive';
 
 
 @NgModule({
@@ -39,6 +42,7 @@ import { ToggleButtonDirective } from './toggle/toggle.directive';
     ButtonDirective,
     ConfirmComponent,
     ConfirmDirective,
+    DivHostDirective,
     EditableComponent,
     EditableGroupDirective,
     EditableItemDirective,
@@ -48,6 +52,8 @@ import { ToggleButtonDirective } from './toggle/toggle.directive';
     GroupDirective,
     GroupFocusComponent,
     GroupFocusDirective,
+    HostComponent,
+    InputHostDirective,
     ItemFocusDirective,
     ItemFocusComponent,
     ParaDirective,
@@ -65,6 +71,7 @@ import { ToggleButtonDirective } from './toggle/toggle.directive';
     ToggleButtonComponent,
     ToggleButtonDirective,
     ToggleParaComponent,
+    InputHostDirective,
   ],
   imports: [
     AppRoutingModule,

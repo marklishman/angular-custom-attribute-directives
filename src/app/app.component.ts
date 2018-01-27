@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     <section>
       <a routerLink="/toggle-button" routerLinkActive="disabled">Toggle Button</a> |
       <a routerLink="/toggle-para" routerLinkActive="disabled">Toggle Para</a> |
+      <a routerLink="/host" routerLinkActive="disabled">Host</a> |
       <a routerLink="/confirm" routerLinkActive="disabled">Confirm</a> |
       <a routerLink="/text-snippets" routerLinkActive="disabled">Text Snippet</a> |
       <a routerLink="/item-focus" routerLinkActive="disabled">Item Focus</a> |

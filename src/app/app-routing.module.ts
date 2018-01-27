@@ -14,22 +14,24 @@ import { ItemFocusComponent } from './focus/item-focus.component';
 import { GroupFocusComponent } from './focus/group-focus.component';
 import { GroupComponent } from './grouping/group.component';
 import { ToggleButtonComponent } from './toggle/toggle-button.component';
+import { HostComponent } from './host/host.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/toggle-button', pathMatch: 'full'},
   {path: 'toggle-button', component: ToggleButtonComponent},
   {path: 'toggle-para', component: ToggleParaComponent},
-  {path: 'text-highlight', component: TextHighlightComponent},
-  {path: 'text-snippets', component: TextSnippetComponent},
+  {path: 'host', component: HostComponent},
   {path: 'confirm', component: ConfirmComponent},
+  {path: 'text-snippets', component: TextSnippetComponent},
+  {path: 'item-focus', component: ItemFocusComponent},
   {path: 'stats', component: StatsComponent},
   {path: 'toc', component: TocComponent},
+  {path: 'text-highlight', component: TextHighlightComponent},
   {path: 'glossary', component: GlossaryComponent},
   {path: 'star-rating', component: StarRatingComponent},
-  {path: 'editable', component: EditableComponent},
-  {path: 'item-focus', component: ItemFocusComponent},
   {path: 'group-focus', component: GroupFocusComponent},
   {path: 'group', component: GroupComponent},
+  {path: 'editable', component: EditableComponent},
 ];
 
 @NgModule({

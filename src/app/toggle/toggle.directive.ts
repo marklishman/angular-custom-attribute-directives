@@ -6,10 +6,10 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 export class ToggleButtonDirective {
 
   @HostBinding('class.selected')
-  hostSelected = false;
+  private hostSelected = false;
 
   @HostListener('click')
-  onClick() {
+  private onClick() {
     this.hostSelected = !this.hostSelected;
   }
 }
