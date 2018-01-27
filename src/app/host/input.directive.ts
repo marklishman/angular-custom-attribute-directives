@@ -3,7 +3,7 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 @Directive({
   selector: 'input[type="text"]'
 })
-export class InputHostDirective {
+export class InputDirective {
 
   private _border: boolean;
   private _disabled: boolean;

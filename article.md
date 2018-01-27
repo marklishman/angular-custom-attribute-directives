@@ -43,6 +43,19 @@ Here is the component implementation, and it's not obvious how the directives ar
 
 ---> host.component.ts
 
-### The First Directive
+### The Container Directive
 
-This is because the first directive is binding to any section with the the `hover
+This is because the first directive is binding to any `section` element with a `container` class, not a specific custom attribute.
+
+---> container.directive.ts
+
+_Details about the host directive here_
+
+### The Input Directive
+
+The second directive will bind itself to any text input.
+
+---> input.directive.ts
+
+_Details about the host directive here_
+

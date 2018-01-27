@@ -3,7 +3,7 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 @Directive({
   selector: 'section.container'
 })
-export class DivHostDirective {
+export class ContainerDirective {
 
   private keepColor: boolean;
 
