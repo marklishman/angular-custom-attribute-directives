@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <header>Click on a paragraph to select it, then again to de-select it</header>
+    <header>Click on a paragraph to toggle selection</header>
     <p appSelected>
       Angular turns your templates into code that's highly optimized for today's JavaScript virtual machines,
       giving you all the benefits of hand-written code with the productivity of a framework.
@@ -31,5 +31,5 @@ import { Component } from '@angular/core';
      }
   `]
 })
-export class SelectedComponent {
+export class ToggleParaComponent {
 }

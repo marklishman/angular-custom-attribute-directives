@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <section>
-      <a routerLink="/selected" routerLinkActive="disabled">Selected</a> |
+      <a routerLink="/toggle-button" routerLinkActive="disabled">Toggle Button</a> |
+      <a routerLink="/toggle-para" routerLinkActive="disabled">Toggle Para</a> |
       <a routerLink="/text-highlight" routerLinkActive="disabled">Text Highlight</a> |
       <a routerLink="/text-snippets" routerLinkActive="disabled">Text Snippet</a> |
       <a routerLink="/confirm" routerLinkActive="disabled">Confirm</a> |
@@ -15,7 +16,7 @@ import { Component } from '@angular/core';
       <a routerLink="/editable" routerLinkActive="disabled">Editable</a> |
       <a routerLink="/item-focus" routerLinkActive="disabled">Item Focus</a> |
       <a routerLink="/group-focus" routerLinkActive="disabled">Group Focus</a> |
-      <a routerLink="/group" routerLinkActive="disabled">Group</a> |
+      <a routerLink="/group" routerLinkActive="disabled">Group</a>
     </section>
     <router-outlet></router-outlet>`,
   styles: [`

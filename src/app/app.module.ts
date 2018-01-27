@@ -2,9 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SelectedDirective } from './selected/selected.directive';
 import { AppRoutingModule } from './app-routing.module';
-import { SelectedComponent } from './selected/selected.component';
+import { ToggleParaComponent } from './toggle/toggle-para.component';
 import { TextHighlightComponent } from './text-highlight/text-highlight.component';
 import { TextHighlightDirective } from './text-highlight/text-highlight.directive';
 import { ConfirmComponent } from './confirm/confirm.component';
@@ -30,11 +29,14 @@ import { ButtonDirective } from './grouping/button.directive';
 import { GroupComponent } from './grouping/group.component';
 import { ParaDirective } from './grouping/para.directive';
 import { GroupDirective } from './grouping/group.directive';
+import { ToggleButtonComponent } from './toggle/toggle-button.component';
+import { ToggleButtonDirective } from './toggle/toggle-button.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ButtonDirective,
     ConfirmComponent,
     ConfirmDirective,
     EditableComponent,
@@ -42,12 +44,14 @@ import { GroupDirective } from './grouping/group.directive';
     EditableItemDirective,
     GlossaryComponent,
     GlossaryDirective,
+    GroupComponent,
+    GroupDirective,
     GroupFocusComponent,
     GroupFocusDirective,
     ItemFocusDirective,
     ItemFocusComponent,
-    SelectedComponent,
-    SelectedDirective,
+    ParaDirective,
+    ToggleParaComponent,
     StatsComponent,
     StarRatingComponent,
     StarRatingDirective,
@@ -58,10 +62,9 @@ import { GroupDirective } from './grouping/group.directive';
     TextSnippetDirective,
     TocComponent,
     TocDirective,
-    ButtonDirective,
-    GroupComponent,
-    ParaDirective,
-    GroupDirective,
+    ToggleButtonComponent,
+    ToggleButtonDirective,
+    ToggleParaComponent,
   ],
   imports: [
     AppRoutingModule,

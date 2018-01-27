@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { SelectedComponent } from './selected/selected.component';
+import { ToggleParaComponent } from './toggle/toggle-para.component';
 import { TextHighlightComponent } from './text-highlight/text-highlight.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { StatsComponent } from './stats/stats.component';
@@ -13,10 +13,12 @@ import { EditableComponent } from './editable/editable.component';
 import { ItemFocusComponent } from './focus/item-focus.component';
 import { GroupFocusComponent } from './focus/group-focus.component';
 import { GroupComponent } from './grouping/group.component';
+import { ToggleButtonComponent } from './toggle/toggle-button.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/selected', pathMatch: 'full'},
-  {path: 'selected', component: SelectedComponent},
+  {path: '', redirectTo: '/toggle-button', pathMatch: 'full'},
+  {path: 'toggle-button', component: ToggleButtonComponent},
+  {path: 'toggle-para', component: ToggleParaComponent},
   {path: 'text-highlight', component: TextHighlightComponent},
   {path: 'text-snippets', component: TextSnippetComponent},
   {path: 'confirm', component: ConfirmComponent},
