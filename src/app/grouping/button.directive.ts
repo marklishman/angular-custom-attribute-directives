@@ -9,6 +9,7 @@ import { GroupDirective } from './group.directive';
 export class ButtonDirective implements Selectable {
 
   // TODO id from group?
+
   private static id = 0;
   private instanceId = ButtonDirective.id++;
 

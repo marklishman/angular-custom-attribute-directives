@@ -7,6 +7,9 @@ export class StarRatingDirective implements OnInit {
 
   private stars: HTMLSpanElement[] = [];
 
+  // TODO @Output
+
+
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2) {
   }

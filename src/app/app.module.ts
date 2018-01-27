@@ -30,7 +30,7 @@ import { GroupComponent } from './grouping/group.component';
 import { ParaDirective } from './grouping/para.directive';
 import { GroupDirective } from './grouping/group.directive';
 import { ToggleButtonComponent } from './toggle/toggle-button.component';
-import { ToggleButtonDirective } from './toggle/toggle-button.directive';
+import { ToggleButtonDirective } from './toggle/toggle.directive';
 
 
 @NgModule({

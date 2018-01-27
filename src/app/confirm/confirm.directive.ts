@@ -10,7 +10,7 @@ export class ConfirmDirective {
 
   @HostListener('click')
   confirm() {
-    if(window.confirm(this.message)) {
+    if (window.confirm(this.message)) {
       this.functionToRun();
     }
   }

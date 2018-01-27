@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <header>Click on paragraphs to toggle selection</header>
+    <header>Click on the paragraphs to toggle selection</header>
     <p appToggle *ngFor="let para of paras">
       {{para}}
     </p>

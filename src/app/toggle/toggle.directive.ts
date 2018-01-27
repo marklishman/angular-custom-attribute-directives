@@ -1,4 +1,4 @@
-import { Directive, HostBinding, HostListener, Optional } from '@angular/core';
+import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appToggle]'
@@ -6,11 +6,10 @@ import { Directive, HostBinding, HostListener, Optional } from '@angular/core';
 export class ToggleButtonDirective {
 
   @HostBinding('class.selected')
-  buttonSelected = false;
+  hostSelected = false;
 
   @HostListener('click')
   onClick() {
-    this.buttonSelected = !this.buttonSelected;
+    this.hostSelected = !this.hostSelected;
   }
-
 }
