@@ -30,3 +30,19 @@ We can re-use this directive on a different type of element.
 You can see the result here.
 
 ---> toggle-para app
+
+## `@HostListener` and `@HostBinding`
+
+This app uses a couple of directives to show several examples of `@HostListener` and `@HostBinding`.
+
+---> host.component app
+
+### The Component
+
+Here is the component implementation, and it's not obvious how the directives are being used.
+
+---> host.component.ts
+
+### The First Directive
+
+This is because the first directive is binding to any section with the the `hover

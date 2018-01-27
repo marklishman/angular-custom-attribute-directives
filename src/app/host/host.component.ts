@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
         <li>Enter text boxes to see border, use esc key to remove border</li>
         <li>Click Disable button to toggle enable / disable</li>
       </ul>
-      </header>
-    <section class="hover-container">
+    </header>
+    <section class="container">
       <input type="text">
       <input type="text">
       <input type="text">
@@ -23,7 +23,7 @@ import { Component } from '@angular/core';
     </button>
   `,
   styles: [`
-    section.hover-container {
+    section.container {
       display: inline-block;
       border: 1px solid DimGray;
       padding: 20px;

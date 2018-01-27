@@ -1,7 +1,7 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '.hover-container'
+  selector: 'section.container'
 })
 export class DivHostDirective {
 
