@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   styles: [`
     button.selected {
       color: White;
-      background: #337ab7;
+      background: SeaGreen ;
     }
   `]
 

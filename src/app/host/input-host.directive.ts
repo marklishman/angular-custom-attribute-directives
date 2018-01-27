@@ -6,10 +6,16 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 export class InputHostDirective {
 
   private _border: boolean;
+  private _disabled: boolean;
 
   @HostBinding('style.border')
   private get border(): string {
     return this._border ? '2px solid OrangeRed' : '';
+  }
+
+  @HostBinding('disabled')
+  private get disable(): boolean {
+    return this._disabled;
   }
 
   @HostListener('focus')
@@ -26,6 +32,13 @@ export class InputHostDirective {
   private onKeyUp(event: KeyboardEvent) {
     if (event.key === 'Escape') {
       this._border = false;
+    }
+  }
+
+  @HostListener('document:click', ['$event.target'])
+  public onDocumentClick(target: HTMLElement) {
+    if (target.id === 'disable') {
+      this._disabled = !this._disabled;
     }
   }
 }

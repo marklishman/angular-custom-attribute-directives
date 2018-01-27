@@ -10,13 +10,9 @@ export class DivHostDirective {
   @HostBinding('style.background-color')
   private color;
 
-  @HostListener('click', ['$event'])
-  @HostListener('mouseover', ['$event'])
-  private onMouseAction(event: MouseEvent) {
+  @HostListener('mouseover')
+  private onMouseOver() {
     this.color = 'LightBlue';
-    if (event.type === 'click') {
-      this.keepColor = true;
-    }
   }
 
   @HostListener('mouseleave')
@@ -26,11 +22,17 @@ export class DivHostDirective {
     }
   }
 
-  @HostListener('document:click', ['$event.target'])
-  public onDocumentClick(target: HTMLElement) {
-    if (target.id === 'clear') {
+  @HostListener('click', ['$event'])
+  @HostListener('dblclick', ['$event'])
+  @HostListener('contextmenu', ['$event'])
+  private onMouseAction(event: MouseEvent) {
+    if (event.type === 'click') {
+      this.keepColor = true;
+    } else if (event.type === 'dblclick') {
       this.keepColor = false;
-      this.onMouseLeave();
+    } else {
+      alert('Context menu is not supported');
+      return false;
     }
   }
 }
