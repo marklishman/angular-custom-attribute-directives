@@ -62,6 +62,7 @@ The second directive will bind itself to any text input.
 The directive performs two actions. 
 
 Firstly, it adds a border around the active input field. The standard DOM `focus` and `blur` events set the `border` flag to determine the CSS border style to be used.
+The border can also be removed from the current input field using the escape key.
 
 Secondly the input fields are toggled between enabled and disabled when a `document:click` event is received. 
 This shows that directives can in fact handle events outside the host.
