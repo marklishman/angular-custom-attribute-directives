@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment'
 
 @Component({
   selector: 'app-root',
   template: `
-    <section>
+    <section *ngIf="dev">
       <a routerLink="/toggle-button" routerLinkActive="disabled">Toggle Button</a> |
       <a routerLink="/toggle-para" routerLinkActive="disabled">Toggle Para</a> |
       <a routerLink="/host" routerLinkActive="disabled">Host</a> |
@@ -32,4 +33,5 @@ import { Component } from '@angular/core';
     }`]
 })
 export class AppComponent {
+  dev = !environment.production;
 }

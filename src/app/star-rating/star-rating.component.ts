@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { environment } from '../../environments/environment'
 
 @Component({
   selector: 'app-star-rating',
   template: `
     <div class="container">
       <div appStarRating *ngFor="let movie of movies">
-        <img src="/angular-custom-attribute-directives/assets/images/{{movie}}.jpg">
+        <img src="{{root}}/assets/images/{{movie}}.jpg">
       </div>
     </div>
   `,
@@ -23,6 +24,9 @@ import { Component } from '@angular/core';
   `]
 })
 export class StarRatingComponent {
+
+  root = environment.production ?
+    '/angular-custom-attribute-directives' : '';
 
   movies: string[] = [
     'shawshank-redemption',
