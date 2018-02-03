@@ -100,10 +100,16 @@ The `EventEmitter` allows us to pass values out of the directive.
 
 ---> test-snippet.directive.ts
 
-And we use Angular's event binding to receive the event payload. 
+And we use Angular's [event binding syntax](https://lishman.io/angular-2-event-binding) 
+to receive the event payload. 
 
 ---> text-snippet.component.ts
 
-See this [Event Binding article](https://lishman.io/angular-2-event-binding) 
-for more details on `EventEmitter` and event binding.
+## Template Reference Variable
 
+The example also a [template reference variable](https://lishman.io/angular-template-reference-variables)
+to access the public methods on the directive.
+
+---> text-snippet.component.ts
+
+---> test-snippet.directive.ts
