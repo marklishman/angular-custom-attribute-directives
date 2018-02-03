@@ -35,3 +35,10 @@ label {
   display: block;
   margin-bottom: 10px;
 }
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #404040;
+  text-decoration: none;
+}

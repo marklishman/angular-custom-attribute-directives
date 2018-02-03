@@ -3,7 +3,7 @@
 Implement attribute directives with the `@Directive`, `@HostBinding` and `@HostListener` decorators. 
 Use `Renderer2`, `ElementRef` and `NativeElement` to change the appearance or behavior of a DOM element.
 
-## Creating a Directives
+# Creating a Directive
 
 We start by using a directive to change this button to be a toggle button.
 
@@ -21,7 +21,7 @@ And specify `appToggle` as the attribute selector in the `@Directive` decorator 
 
 `@HostBinding` sets a property value on the host element. Here we add or remove the `selected` class depending on the value of `hostSelected`. 
 
-## Re-using the Directive
+# Re-using the Directive
 
 We can re-use this directive on a different type of element.
 
@@ -68,3 +68,13 @@ Secondly the input fields are toggled between enabled and disabled when a `docum
 This shows that directives can in fact handle events outside the host.
 
 _Note about the selectors. Use custom attributes for clarity._
+
+# Passing Values to the Directive
+
+We pass values to the directive by binding to a variable decorated with `@Input`. 
+For example, we can pass a confirmation message and the function to run if confirmed.
+
+---> confirm.component.ts
+---> confirm.directive.ts
+---> confirm app
+

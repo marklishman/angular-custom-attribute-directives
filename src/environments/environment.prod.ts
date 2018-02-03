@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  imageRoot: '/angular-custom-attribute-directives'
 };

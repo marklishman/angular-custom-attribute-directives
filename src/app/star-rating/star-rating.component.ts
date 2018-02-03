@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environment } from '../../environments/environment'
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-star-rating',
@@ -25,8 +25,7 @@ import { environment } from '../../environments/environment'
 })
 export class StarRatingComponent {
 
-  root = environment.production ?
-    '/angular-custom-attribute-directives' : '';
+  root = environment.imageRoot;
 
   movies: string[] = [
     'shawshank-redemption',

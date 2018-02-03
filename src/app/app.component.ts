@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { environment } from '../environments/environment'
+import { Component, isDevMode } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -25,13 +24,8 @@ import { environment } from '../environments/environment'
     section {
       margin: 10px 0;
     }
-    .disabled {
-      pointer-events: none;
-      cursor: default;
-      color: #404040;
-      text-decoration: none;
-    }`]
+  `]
 })
 export class AppComponent {
-  dev = !environment.production;
+  dev = isDevMode();
 }
