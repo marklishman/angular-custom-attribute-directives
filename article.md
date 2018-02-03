@@ -31,7 +31,7 @@ You can see the result here.
 
 ---> toggle-para app
 
-## `@HostListener` and `@HostBinding`
+## More about `@HostListener` and `@HostBinding`
 
 This app uses a couple of directives to show several examples of `@HostListener` and `@HostBinding`.
 
@@ -138,3 +138,7 @@ _Note about security when using `nativeElement`_
 ---> star rating app
 
 
+<iframe src="https://marklishman.github.io/angular-custom-attribute-directives/#/host"
+		frameborder="0"
+                style="height: 200px;">
+</iframe>
