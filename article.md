@@ -122,5 +122,6 @@ to access the public methods on the directive.
 To access the host DOM element, inject an `ElementRef` object and using the `nativeElement` property.
 
 _Note about `ElementRef` being an abstraction to work with other renderers_
+
 _Note about security when using `nativeElement`_
 
