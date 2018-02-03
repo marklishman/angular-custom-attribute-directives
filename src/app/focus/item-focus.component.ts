@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-item-focus',
   template: `
+    <header>Click outside the text boxes</header>
     <form>
-      <label>One: <input appFocus type="text"></label>
-      <label>Two: <input type="text"></label>
-      <label>Three: <input type="text"></label>
+      One: <input type="text">
+      Two: <input appFocus type="text">
+      Three: <input type="text">
     </form>
   `
 })

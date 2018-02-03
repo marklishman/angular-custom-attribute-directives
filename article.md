@@ -139,6 +139,7 @@ _Note about security when using `nativeElement`_
 
 ---> star rating app
 
+---------------------------------------------------------------------------------------------------
 
 <iframe src="https://marklishman.github.io/angular-custom-attribute-directives/#/host"
 		frameborder="0"
