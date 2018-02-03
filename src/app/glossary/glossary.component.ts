@@ -4,6 +4,7 @@ import { GlossaryTerm } from './glossary-term';
 @Component({
   selector: 'app-glossary',
   template: `
+    <header>Hover your mouse over the colored text to see a definition</header>
     <p [appGlossary]="glossary">
       TypeScript is a free and open-source programming language developed
       and maintained by Microsoft. It is a strict syntactical superset of

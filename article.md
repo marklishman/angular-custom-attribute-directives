@@ -89,7 +89,7 @@ For example, we can pass a confirmation message and the function to run if confi
 
 Take a look at this demo app.
 
----> test-snippet app
+---> text-snippet app
 
 Here is the code.
 
@@ -109,7 +109,7 @@ to receive the event payload.
 ---> text-snippet.component.ts
 
 ## Template Reference Variable
-˚
+
 The example also a [template reference variable](https://lishman.io/angular-template-reference-variables)
 to access the public methods on the directive.
 
@@ -120,6 +120,8 @@ to access the public methods on the directive.
 # Access the Host DOM Element
 
 To access the host DOM element, inject an `ElementRef` object and using the `nativeElement` property.
+
+---> focus app
 
 _Note about `ElementRef` being an abstraction to work with other renderers_
 
