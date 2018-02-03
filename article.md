@@ -49,9 +49,11 @@ This is because the first directive is binding to any `section` element with a `
 
 ---> container.directive.ts
 
-The `color` variable is used to specify the background color of the host, and is updated as the user enters (`mouseover`) and leaves (`mouseleave`) the container.
+The `color` variable is used to specify the background color of the host, and is updated as the user enters (`mouseover`) 
+and leaves (`mouseleave`) the container.
 
-The `onMouseClicks` supports several `@HostListener` decorators and uses the DOM `MouseEvent` object, which is passed in as a parameter, to distinguish between them.
+The `onMouseClicks` supports several `@HostListener` decorators and uses the DOM `MouseEvent` 
+object, which is passed in as a parameter, to distinguish between them.
 
 ### The Input Directive
 
@@ -61,7 +63,8 @@ The second directive will bind itself to any text input.
 
 The directive performs two actions. 
 
-Firstly, it adds a border around the active input field. The standard DOM `focus` and `blur` events set the `border` flag to determine the CSS border style to be used.
+Firstly, it adds a border around the active input field. The standard DOM `focus` and `blur` events set the `border` flag to 
+determine the CSS border style to be used.
 The border can also be removed from the current input field using the escape key.
 
 Secondly the input fields are toggled between enabled and disabled when a `document:click` event is received. 
@@ -94,7 +97,7 @@ Here is the code.
 
 ---> test-snippet.directive.ts
 
-## EventEmitter
+## Events
 
 The `EventEmitter` allows us to pass values out of the directive.
 
@@ -106,10 +109,18 @@ to receive the event payload.
 ---> text-snippet.component.ts
 
 ## Template Reference Variable
-
+˚
 The example also a [template reference variable](https://lishman.io/angular-template-reference-variables)
 to access the public methods on the directive.
 
 ---> text-snippet.component.ts
 
 ---> test-snippet.directive.ts
+
+# Access the Host DOM Element
+
+To access the host DOM element, inject an `ElementRef` object and using the `nativeElement` property.
+
+_Note about `ElementRef` being an abstraction to work with other renderers_
+_Note about security when using `nativeElement`_
+
