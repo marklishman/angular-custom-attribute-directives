@@ -69,7 +69,9 @@ This shows that directives can in fact handle events outside the host.
 
 _Note about the selectors. Use custom attributes for clarity._
 
-# Passing Values to the Directive
+# Directive Communication
+
+## Input
 
 We pass values to the directive by binding to a variable decorated with `@Input`. 
 For example, we can pass a confirmation message and the function to run if confirmed.
@@ -79,4 +81,29 @@ For example, we can pass a confirmation message and the function to run if confi
 ---> confirm.directive.ts
 
 ---> confirm app
+
+# Output  
+
+Take a look at this demo app.
+
+---> test-snippet app
+
+Here is the code.
+
+---> text-snippet.component.ts
+
+---> test-snippet.directive.ts
+
+## EventEmitter
+
+The `EventEmitter` allows us to pass values out of the directive.
+
+---> test-snippet.directive.ts
+
+And we use Angular's event binding to receive the event payload. 
+
+---> text-snippet.component.ts
+
+See this [Event Binding article](https://lishman.io/angular-2-event-binding) 
+for more details on `EventEmitter` and event binding.
 
