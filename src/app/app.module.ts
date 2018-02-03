@@ -34,6 +34,7 @@ import { ToggleButtonDirective } from './toggle/toggle.directive';
 import { HostComponent } from './host/host.component';
 import { InputDirective } from './host/input.directive';
 import { ContainerDirective } from './host/container.directive';
+import { TocSimpleComponent } from './toc/toc-simple.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { ContainerDirective } from './host/container.directive';
     ToggleButtonDirective,
     ToggleParaComponent,
     InputDirective,
+    TocSimpleComponent,
   ],
   imports: [
     AppRoutingModule,

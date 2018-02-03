@@ -15,6 +15,7 @@ import { GroupFocusComponent } from './focus/group-focus.component';
 import { GroupComponent } from './grouping/group.component';
 import { ToggleButtonComponent } from './toggle/toggle-button.component';
 import { HostComponent } from './host/host.component';
+import { TocSimpleComponent } from './toc/toc-simple.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/toggle-button', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'text-snippets', component: TextSnippetComponent},
   {path: 'item-focus', component: ItemFocusComponent},
   {path: 'stats', component: StatsComponent},
+  {path: 'toc-simple', component: TocSimpleComponent},
   {path: 'toc', component: TocComponent},
   {path: 'text-highlight', component: TextHighlightComponent},
   {path: 'glossary', component: GlossaryComponent},

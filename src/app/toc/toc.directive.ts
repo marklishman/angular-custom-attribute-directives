@@ -3,7 +3,7 @@ import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
 @Directive({
   selector: '[appToc]'
 })
-export class TocDirective implements OnInit{
+export class TocDirective implements OnInit {
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2) {

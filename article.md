@@ -125,3 +125,16 @@ _Note about `ElementRef` being an abstraction to work with other renderers_
 
 _Note about security when using `nativeElement`_
 
+# `Renderer2`
+
+---> stats app
+
+---> simple toc app
+
+---> glossary app
+
+---> highlight text app
+
+---> star rating app
+
+

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div>
-      <header>Enter some text to highlight it (eg. 'me')</header>
+      <header>Enter some text to highlight it (eg. 'ing' or 'me')</header>
       <input #input
              (keyup)="0"
              type="text"
