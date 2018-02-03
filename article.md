@@ -75,6 +75,8 @@ We pass values to the directive by binding to a variable decorated with `@Input`
 For example, we can pass a confirmation message and the function to run if confirmed.
 
 ---> confirm.component.ts
+
 ---> confirm.directive.ts
+
 ---> confirm app
 
