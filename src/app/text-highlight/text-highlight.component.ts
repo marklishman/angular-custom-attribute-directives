@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div>
-      <header>Enter some text to highlight it (eg. 'rule' or 'Club')</header>
+      <header>
+        Enter some text such as 'rule' or 'Club' to highlight (case sensitive)
+      </header>
       <input #input
              (keyup)="0"
              type="text"
@@ -18,7 +20,15 @@ import { Component } from '@angular/core';
         {{movieQuote}}
       </p>
     </div>
-  `
+  `,
+  styles: [`
+    div, p {
+      max-width: 550px;
+    }
+    input, select {
+      font-size: 16px;
+    }
+  `]
 })
 export class TextHighlightComponent {
   movieQuote = `
