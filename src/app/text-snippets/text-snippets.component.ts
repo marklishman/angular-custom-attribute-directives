@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <div>
       <header [hidden]="speech.snippets.length">Select some of the text below</header>
-      <header [hidden]="!speech.snippets.length">Select some more to keep adding to the list</header>
+      <header [hidden]="!speech.snippets.length">Select some more to add to the list</header>
       <p appTextSelector #speech="appTextSelector" (selected)="onSelected($event)">
         {{movieQuote}}
       </p>
@@ -48,4 +48,5 @@ export class TextSnippetComponent {
   onSelected(text: string) {
     this.text = text;
   }
+
 }
