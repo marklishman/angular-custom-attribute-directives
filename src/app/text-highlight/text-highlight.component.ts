@@ -4,28 +4,31 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div>
-      <header>Enter some text to highlight it (eg. 'ing' or 'me')</header>
+      <header>Enter some text to highlight it (eg. 'rule' or 'Club')</header>
       <input #input
              (keyup)="0"
              type="text"
              placeholder="enter text to highlight">
       <select #color (change)="0">
-      <option value="yellow" selected>Yellow</option>
-      <option value="pink">Red</option>
-      <option value="lightgreen">Green</option>
-    </select>
+        <option value="yellow" selected>Yellow</option>
+        <option value="pink">Red</option>
+        <option value="lightgreen">Green</option>
+      </select>
       <p [appTextHighlight]="input.value" [highlightColor]="color.value">
-        I walk the streets of Japan till I get lost.
-        Cause it doesn't remind me of anything.
-        With a graveyard tan carrying a cross.
-        Cause it doesn't remind me of anything.
-        I like studying faces in a parking lot.
-        Cause it doesn't remind me of anything.
-        I like driving backwards in the fog.
-        Cause it doesn't remind me of anything.
+        {{movieQuote}}
       </p>
     </div>
   `
 })
 export class TextHighlightComponent {
+  movieQuote = `
+      The first rule of Fight Club is: You do not talk about Fight Club.
+      The second rule of Fight Club is: You do not talk about Fight Club.
+      Third rule of Fight Club: someone yells stop, goes limp, taps out, the fight is over.
+      Fourth rule: only two guys to a fight. Fifth rule: one fight at a time, fellas.
+      Sixth rule: no shirts, no shoes.
+      Seventh rule: fights will go on as long as they have to.
+      And the eighth and final rule: if this is your first night at Fight Club,
+      you have to fight.
+  `;
 }
