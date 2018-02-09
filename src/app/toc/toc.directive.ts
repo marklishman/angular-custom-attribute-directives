@@ -15,7 +15,7 @@ export class TocDirective implements OnInit {
     for (let i = 0; i < headingElements.length; i++) {
       const heading = headingElements.item(i);
       const level = heading.tagName[1];
-      toc += '\n' + ' '.repeat(level) + heading.textContent;
+      toc += '\n' + '  '.repeat(level) + heading.textContent;
     }
     this.renderer.setProperty(this.elementRef.nativeElement, 'title', toc);
   }

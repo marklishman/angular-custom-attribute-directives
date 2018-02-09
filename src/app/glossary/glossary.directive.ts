@@ -23,14 +23,15 @@ export class GlossaryDirective implements OnInit {
       )
     );
 
-
     this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', this.text);
   }
 
   private substituteTerms(term: string, definition: string): void {
-    const replacement = `<span style="color: tomato; cursor: pointer;" title="${definition}">${term}</span>`;
     const searchTerm = new RegExp(term, 'g');
-    this.text = this.text.replace(searchTerm, replacement);
+    this.text = this.text.replace(
+      searchTerm,
+      `<span style="color: tomato; cursor: pointer;" title="${definition}">${term}</span>`
+    );
   }
 
 }
