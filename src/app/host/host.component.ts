@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
         Click in the box to change hover color, double click to remove hover color
     </header>
     <header [hidden]="show.innerText === 'Show'">
-        Enter an input field to see the border, press 'esc' key to remove
+        Enter an input field to see the border, press 'esc' key to remove the border
     </header>
     <article>
       <section class="container border">
