@@ -1,7 +1,7 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: 'input[type="text"]'
+  selector: 'input[type="date"]'
 })
 export class InputDirective {
 

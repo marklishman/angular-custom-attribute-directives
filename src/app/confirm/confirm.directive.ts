@@ -14,5 +14,4 @@ export class ConfirmDirective {
       this.functionToRun();
     }
   }
-
 }

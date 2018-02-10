@@ -7,13 +7,12 @@ import { Component } from '@angular/core';
         Click in the box to change hover color, double click to remove hover color
     </header>
     <header [hidden]="show.innerText === 'Show'">
-        Enter an input field to see the border, press 'esc' key to remove the border
+        Enter a date field to see the border, press 'esc' key to remove the border
     </header>
     <article>
       <section class="container border">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+        <input type="date">
+        <input type="date">
       </section>
       <button #show
               id="show"
@@ -28,10 +27,12 @@ import { Component } from '@angular/core';
       align-items: center;
     }
     section.container {
+      display: flex;
+      justify-content: space-around;
       height: 24px;
       margin: 0 20px;
       padding: 30px 20px;
-      width: 530px;
+      width: 450px;
     }
   `]
 })
