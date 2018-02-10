@@ -1,15 +1,15 @@
-import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appStats]'
 })
-export class StatsDirective implements OnInit {
+export class StatsDirective implements AfterViewInit {
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2) {
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     const text = this.elementRef.nativeElement.innerText;
     const stats = `Words: ${text.split(' ').length}\n` +
       `Characters (with spaces): ${text.length}\n` +

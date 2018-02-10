@@ -4,7 +4,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ToggleParaComponent } from './toggle/toggle-para.component';
 import { TextHighlightComponent } from './text-highlight/text-highlight.component';
 import { ConfirmComponent } from './confirm/confirm.component';
-import { StatsComponent } from './stats/stats.component';
+import { ToggleParaWithStatsComponent } from './stats/toggle-para-with-stats.component';
 import { TocComponent } from './toc/toc.component';
 import { TextSnippetComponent } from './text-snippets/text-snippets.component';
 import { GlossaryComponent } from './glossary/glossary.component';
@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'confirm', component: ConfirmComponent},
   {path: 'text-snippets', component: TextSnippetComponent},
   {path: 'item-focus', component: ItemFocusComponent},
-  {path: 'stats', component: StatsComponent},
+  {path: 'stats', component: ToggleParaWithStatsComponent},
   {path: 'toc-simple', component: TocSimpleComponent},
   {path: 'toc', component: TocComponent},
   {path: 'text-highlight', component: TextHighlightComponent},
