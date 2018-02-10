@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+    <header>
+      Enter some text such as 'rule' or 'Club' to highlight (case sensitive)
+    </header>
     <div>
-      <header>
-        Enter some text such as 'rule' or 'Club' to highlight (case sensitive)
-      </header>
       <input #input
              (keyup)="0"
              type="text"
@@ -16,19 +16,11 @@ import { Component } from '@angular/core';
         <option value="pink">Red</option>
         <option value="lightgreen">Green</option>
       </select>
-      <p [appTextHighlight]="input.value" [highlightColor]="color.value">
-        {{movieQuote}}
-      </p>
     </div>
-  `,
-  styles: [`
-    div, p {
-      max-width: 550px;
-    }
-    input, select {
-      font-size: 16px;
-    }
-  `]
+    <p [appTextHighlight]="input.value" [highlightColor]="color.value">
+      {{movieQuote}}
+    </p>
+  `
 })
 export class TextHighlightComponent {
   movieQuote = `

@@ -3,29 +3,25 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-text-selector',
   template: `
-    <div>
-      <header [hidden]="speech.snippets.length">Select some of the text below</header>
-      <header [hidden]="!speech.snippets.length">Select some more to add to the list</header>
-      <p appTextSelector #speech="appTextSelector" (selected)="onSelected($event)">
-        {{movieQuote}}
-      </p>
-      <p>Last selection: <em>{{text || 'none'}}</em></p>
-      <a [hidden]="!speech.snippets.length"
-         (click)="speech.clear(); false" href="">
-        Clear
-      </a>
-      <ol>
-        <li *ngFor="let snippet of speech.snippets">{{snippet}}</li>
-      </ol>
-    </div>
+    <header [hidden]="quote.snippets.length">Select some of the text below</header>
+    <header [hidden]="!quote.snippets.length">Select some more to add to the list</header>
+    <p appTextSelector
+       #quote="appTextSelector"
+       (selected)="onSelected($event)">
+      {{movieQuote}}
+    </p>
+    <p>Last selection: <em>{{text || 'none'}}</em></p>
+    <a [hidden]="!quote.snippets.length"
+       (click)="quote.clear(); false" href="">
+      Clear
+    </a>
+    <ol>
+      <li *ngFor="let snippet of quote.snippets">{{snippet}}</li>
+    </ol>
   `,
   styles: [`
-    div, p {
-      margin: 0 10px;
-      max-width: 650px;
-    }
     em {
-      color: FireBrick;
+      color: Green;
       font-style: normal;
     }
   `]

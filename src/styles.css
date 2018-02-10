@@ -3,20 +3,20 @@ html {
   font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif
 }
 
+header {
+  color: chocolate;
+  font-size: 16px;
+  margin: 0 0 10px 10px;
+}
+
 h1, h2, h3 {
   margin-left: 10px;
 }
 
 p, div {
-  max-width: 440px;
+  max-width: 610px;
+  margin: 0 10px;
   padding: 10px;
-}
-
-header {
-  color: chocolate;
-  font-size: 16px;
-  margin-bottom: 10px;
-  margin-top: 0;
 }
 
 header ul {
@@ -38,6 +38,10 @@ form {
 label {
   display: block;
   margin-bottom: 10px;
+}
+
+input, select {
+  font-size: 16px;
 }
 
 .disabled {

@@ -33,9 +33,6 @@ import { Component } from '@angular/core';
       margin: 0;
       padding: 2px;
     }
-    div, p {
-      max-width: 500px;
-    }
   `]
 })
 export class TocSimpleComponent{
