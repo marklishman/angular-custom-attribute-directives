@@ -5,7 +5,12 @@ import { GlossaryTerm } from './glossary-term';
   selector: 'app-glossary',
   template: `
     <header>Hover your mouse over the colored text to see a definition</header>
-    <p [appGlossary]="glossary">
+    <p [appGlossary]="techieText" [glossary]="glossaryTerms"></p>
+  `
+})
+export class GlossaryComponent {
+
+  techieText = `
       TypeScript is a free and open-source programming language developed
       and maintained by Microsoft. It is a strict syntactical superset of
       JavaScript, and adds optional static typing to the language. Anders Hejlsberg,
@@ -14,12 +19,9 @@ import { GlossaryTerm } from './glossary-term';
       applications for client-side or server-side (Node.js) execution.
       TypeScript is designed for development of large applications and compiles to
       JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript
-      programs are also valid TypeScript programs.
-    </p>
-  `
-})
-export class GlossaryComponent {
-  glossary: GlossaryTerm[] = [
+      programs are also valid TypeScript programs.`;
+
+  glossaryTerms: GlossaryTerm[] = [
     new GlossaryTerm(
       'JavaScript',
       'A high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.'

@@ -6,16 +6,14 @@ import { GlossaryTerm } from './glossary-term';
 })
 export class GlossaryDirective implements OnInit {
 
-  @Input('appGlossary') glossary;
-  private text: string;
+  @Input('appGlossary') private text: string;
+  @Input() private glossary: GlossaryTerm[];
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2) {
   }
 
   ngOnInit() {
-    this.text = this.elementRef.nativeElement.innerText;
-
     this.glossary.forEach(
       (glossaryTerm) => this.substituteTerms(
         glossaryTerm.term,
