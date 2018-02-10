@@ -3,13 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-host',
   template: `
-    <header>
-      <ul>
-        <li>Mouse over box to change color, mouse out to change back</li>
-        <li>Click box to keep color, double click to remove color</li>
-        <li>Enter text boxes to see border, use esc key to remove border</li>
-        <li>Click Disable button to toggle enable / disable</li>
-      </ul>
+    <header [hidden]="show.innerText === 'Hide'">
+        Click in the box to change hover color, double click to remove hover color
+    </header>
+    <header [hidden]="show.innerText === 'Show'">
+        Enter an input field to see the border, press 'esc' key to remove
     </header>
     <article>
       <section class="container">
@@ -17,21 +15,18 @@ import { Component } from '@angular/core';
         <input type="text">
         <input type="text">
       </section>
-      <div>
-        <button #lock
-                (click)="lock.innerText = lock.innerText === 'Lock' ? 'Unlock' : 'Lock'"
-                id="lock">
-          Lock
-        </button>
-        <button #show
-                (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'"
-                id="show">
-          Hide
-        </button>
-      </div>
+      <button #show
+              (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'"
+              id="show">
+        Show
+      </button>
     </article>
   `,
   styles: [`
+    article {
+      display: flex;
+      align-items: center;
+    }
     section.container {
       border: 1px solid DimGray;
       display: inline-block;
@@ -43,12 +38,8 @@ import { Component } from '@angular/core';
     input {
       outline: none;
     }
-    article, article div {
-      display: flex;
-    }
-    article div {
-      flex-direction: column;
-      justify-content: space-between;
+    button {
+      margin-left: 10px;
     }
   `]
 })

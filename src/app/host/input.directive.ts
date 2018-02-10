@@ -12,16 +12,8 @@ export class InputDirective {
     return this.border ? '2px solid OrangeRed' : '';
   }
 
-  @HostBinding('disabled')
-  private disabled = false;
-
   @HostBinding('hidden')
-  private hidden = false;
-
-  @HostListener('click', ['$event'])
-  private onClick() {
-    event.stopPropagation();
-  }
+  private hidden = true;
 
   @HostListener('focus')
   private onFocus() {
@@ -40,11 +32,20 @@ export class InputDirective {
     }
   }
 
+  @HostListener('click', ['$event'])
+  @HostListener('dblclick', ['$event'])
+  @HostListener('contextmenu', ['$event'])
+  private onMouseClicks() {
+    if (event.type === 'contextmenu') {
+      alert('Context menu is not supported');
+      return false;
+    }
+    event.stopPropagation();
+  }
+
   @HostListener('document:click', ['$event.target'])
   public onDocumentClick(target: HTMLElement) {
-    if (target.id === 'lock') {
-      this.disabled = !this.disabled;
-    } else if (target.id === 'show') {
+    if (target.id === 'show') {
       this.hidden = !this.hidden;
     }
   }

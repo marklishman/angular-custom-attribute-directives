@@ -26,18 +26,15 @@ export class ContainerDirective {
     this.color = null;
   }
 
-  @HostListener('click', ['$event'])
-  @HostListener('dblclick', ['$event'])
-  @HostListener('contextmenu', ['$event'])
-  private onMouseClicks(event: MouseEvent) {
-    if (event.type === 'click') {
-      this.boxColor = this.colors.next().value;
-    } else if (event.type === 'dblclick') {
-      this.boxColor = null;
-    } else if (event.type === 'contextmenu') {
-      alert('Context menu is not supported');
-      return false;
-    }
+  @HostListener('click')
+  private onClick() {
+    this.boxColor = this.colors.next().value;
+    this.onMouseOver();
+  }
+
+  @HostListener('dblclick')
+  private onDoubleClick() {
+    this.boxColor = null;
     this.onMouseOver();
   }
 }
