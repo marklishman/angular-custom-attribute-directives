@@ -5,21 +5,25 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 })
 export class ContainerDirective {
 
-  private keepColor: boolean;
+  private colors = colorGenerator();
+  private boxColor = null;
 
   @HostBinding('style.background-color')
-  private color;
+  private color: string;
+
+  @HostBinding('title')
+  private get title() {
+    return `${this.color ? this.color : 'Blank'} box`;
+  }
 
   @HostListener('mouseover')
   private onMouseOver() {
-    this.color = 'LightBlue';
+    this.color = this.boxColor;
   }
 
   @HostListener('mouseleave')
   private onMouseLeave() {
-    if (!this.keepColor) {
-      this.color = 'White';
-    }
+    this.color = null;
   }
 
   @HostListener('click', ['$event'])
@@ -27,12 +31,22 @@ export class ContainerDirective {
   @HostListener('contextmenu', ['$event'])
   private onMouseClicks(event: MouseEvent) {
     if (event.type === 'click') {
-      this.keepColor = true;
+      this.boxColor = this.colors.next().value;
     } else if (event.type === 'dblclick') {
-      this.keepColor = false;
-    } else {
+      this.boxColor = null;
+    } else if (event.type === 'contextmenu') {
       alert('Context menu is not supported');
       return false;
     }
+    this.onMouseOver();
+  }
+}
+
+function* colorGenerator(): IterableIterator<String> {
+  const colors = ['LightBlue', 'Pink', 'LightGreen'];
+  let i = -1;
+  while (true) {
+    i < colors.length - 1 ? i++ : i = 0;
+    yield colors[i];
   }
 }

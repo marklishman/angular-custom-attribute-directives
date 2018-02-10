@@ -11,25 +11,44 @@ import { Component } from '@angular/core';
         <li>Click Disable button to toggle enable / disable</li>
       </ul>
     </header>
-    <section class="container">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-    </section>
-    <button #btn
-            (click)="btn.innerText = btn.innerText === 'Enable' ? 'Disable' : 'Enable'"
-            id="disable">
-      Disable
-    </button>
+    <article>
+      <section class="container">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+      </section>
+      <div>
+        <button #lock
+                (click)="lock.innerText = lock.innerText === 'Lock' ? 'Unlock' : 'Lock'"
+                id="lock">
+          Lock
+        </button>
+        <button #show
+                (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'"
+                id="show">
+          Hide
+        </button>
+      </div>
+    </article>
   `,
   styles: [`
     section.container {
-      display: inline-block;
       border: 1px solid DimGray;
-      padding: 20px;
+      display: inline-block;
+      height: 24px;
+      margin-left: 20px;
+      padding: 30px 20px;
+      width: 530px;
     }
     input {
       outline: none;
+    }
+    article, article div {
+      display: flex;
+    }
+    article div {
+      flex-direction: column;
+      justify-content: space-between;
     }
   `]
 })

@@ -6,7 +6,6 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 export class InputDirective {
 
   private border: boolean;
-  private disabled: boolean;
 
   @HostBinding('style.border')
   private get borderStyle(): string {
@@ -14,12 +13,18 @@ export class InputDirective {
   }
 
   @HostBinding('disabled')
-  private get isDisabled(): boolean {
-    return this.disabled;
+  private disabled = false;
+
+  @HostBinding('hidden')
+  private hidden = false;
+
+  @HostListener('click', ['$event'])
+  private onClick() {
+    event.stopPropagation();
   }
 
   @HostListener('focus')
-  private onClick() {
+  private onFocus() {
     this.border = true;
   }
 
@@ -37,8 +42,10 @@ export class InputDirective {
 
   @HostListener('document:click', ['$event.target'])
   public onDocumentClick(target: HTMLElement) {
-    if (target.id === 'disable') {
+    if (target.id === 'lock') {
       this.disabled = !this.disabled;
+    } else if (target.id === 'show') {
+      this.hidden = !this.hidden;
     }
   }
 }

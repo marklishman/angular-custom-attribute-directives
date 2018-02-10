@@ -12,7 +12,7 @@ export class TextSnippetDirective {
 
   @HostListener('mouseup')
   onSelected() {
-    const text = window.getSelection().toString();
+    const text = document.getSelection().toString();
     if (text) {
       this._snippets.push(text);
       this.selected.emit(text);
