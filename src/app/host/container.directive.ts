@@ -1,7 +1,7 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: 'section.container'
+  selector: 'section.container',
 })
 export class ContainerDirective {
 

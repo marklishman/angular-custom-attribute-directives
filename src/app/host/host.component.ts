@@ -10,14 +10,14 @@ import { Component } from '@angular/core';
         Enter an input field to see the border, press 'esc' key to remove
     </header>
     <article>
-      <section class="container">
+      <section class="container border">
         <input type="text">
         <input type="text">
         <input type="text">
       </section>
       <button #show
-              (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'"
-              id="show">
+              id="show"
+              (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'">
         Show
       </button>
     </article>
@@ -28,18 +28,10 @@ import { Component } from '@angular/core';
       align-items: center;
     }
     section.container {
-      border: 1px solid DimGray;
-      display: inline-block;
       height: 24px;
-      margin-left: 20px;
+      margin: 0 20px;
       padding: 30px 20px;
       width: 530px;
-    }
-    input {
-      outline: none;
-    }
-    button {
-      margin-left: 10px;
     }
   `]
 })

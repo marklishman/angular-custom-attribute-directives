@@ -7,6 +7,9 @@ export class InputDirective {
 
   private border: boolean;
 
+  @HostBinding('style.outline')
+  private outline = 'none';
+
   @HostBinding('style.border')
   private get borderStyle(): string {
     return this.border ? '2px solid OrangeRed' : '';
