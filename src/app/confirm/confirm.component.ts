@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
               [disabled]="boxColor==='dodgerblue'">
         Blue
       </button>
-      <button [appConfirm]="'Are you sure you want to change the color to red?'"
+      <button appConfirm="Are you sure you want to change the color to red?"
               [functionToRun]="setBoxColor('crimson')"
               [disabled]="boxColor==='crimson'">
         Red
