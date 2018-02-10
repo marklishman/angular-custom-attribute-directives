@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
     p {
       color: DarkGray;
       cursor: pointer;
+      margin-bottom: 10px;
     }
     p.selected {
        color: Black;
