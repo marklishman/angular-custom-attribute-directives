@@ -11,13 +11,15 @@ import { Component } from '@angular/core';
       {{movieQuote}}
     </p>
     <p>Last selection: <em>{{text || 'none'}}</em></p>
-    <a [hidden]="!quote.snippets.length"
-       (click)="quote.clear(); false" href="">
-      Clear
-    </a>
-    <ol>
-      <li *ngFor="let snippet of quote.snippets">{{snippet}}</li>
-    </ol>
+    <div>
+      <a [hidden]="!quote.snippets.length"
+         (click)="quote.clear(); false" href="">
+        Clear
+      </a>
+      <ol>
+        <li *ngFor="let snippet of quote.snippets">{{snippet}}</li>
+      </ol>
+    </div>
   `,
   styles: [`
     em {

@@ -39,7 +39,7 @@ export class ContainerDirective {
   }
 }
 
-function* colorGenerator(): IterableIterator<String> {
+function* colorGenerator(): IterableIterator<string> {
   const colors = ['LightBlue', 'Pink', 'LightGreen'];
   let i = -1;
   while (true) {

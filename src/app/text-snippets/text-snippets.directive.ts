@@ -6,9 +6,9 @@ import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
 })
 export class TextSnippetDirective {
 
-  private _snippets: string[] = [];
-
   @Output() selected = new EventEmitter<string>();
+
+  private _snippets: string[] = [];
 
   @HostListener('mouseup')
   onSelected() {
