@@ -5,14 +5,14 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 })
 export class InputDirective {
 
-  private border: boolean;
+  private showBorder: boolean;
 
   @HostBinding('style.outline')
   private outline = 'none';
 
   @HostBinding('style.border')
   private get borderStyle(): string {
-    return this.border ? '2px solid OrangeRed' : '';
+    return this.showBorder ? '2px solid OrangeRed' : '';
   }
 
   @HostBinding('hidden')
@@ -20,18 +20,18 @@ export class InputDirective {
 
   @HostListener('focus')
   private onFocus() {
-    this.border = true;
+    this.showBorder = true;
   }
 
   @HostListener('blur')
   private onBlur() {
-    this.border = false;
+    this.showBorder = false;
   }
 
   @HostListener('keydown', ['$event'])
   private onKeyUp(event: KeyboardEvent) {
     if (event.key === 'Escape') {
-      this.border = false;
+      this.showBorder = false;
     }
   }
 
