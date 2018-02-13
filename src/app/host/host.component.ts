@@ -14,11 +14,16 @@ import { Component } from '@angular/core';
         <input type="date">
         <input type="date">
       </section>
-      <button #show
-              id="show"
-              (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'">
-        Show
-      </button>
+      <section>
+        <p>
+          <button #show
+                  id="show"
+                  (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'">
+            Show
+          </button>
+        </p>
+        <header>Click the button</header>
+      </section>
     </article>
   `,
   styles: [`
@@ -30,7 +35,7 @@ import { Component } from '@angular/core';
       display: flex;
       justify-content: space-around;
       height: 24px;
-      margin: 0 20px;
+      margin-left: 20px;
       padding: 30px 20px;
       width: 450px;
     }

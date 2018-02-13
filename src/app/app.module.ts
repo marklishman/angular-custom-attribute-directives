@@ -32,7 +32,7 @@ import { ToggleButtonComponent } from './toggle/toggle-button.component';
 import { ToggleButtonDirective } from './toggle/toggle.directive';
 import { ToggleParaWithStatsComponent } from './stats/toggle-para-with-stats.component';
 import { HostComponent } from './host/host.component';
-import { InputDirective } from './host/input.directive';
+import { DateInputDirective } from './host/date-input.directive';
 import { ContainerDirective } from './host/container.directive';
 import { TocSimpleComponent } from './toc/toc-simple.component';
 
@@ -54,7 +54,7 @@ import { TocSimpleComponent } from './toc/toc-simple.component';
     GroupFocusComponent,
     GroupFocusDirective,
     HostComponent,
-    InputDirective,
+    DateInputDirective,
     ItemFocusDirective,
     ItemFocusComponent,
     ParaDirective,
@@ -72,7 +72,7 @@ import { TocSimpleComponent } from './toc/toc-simple.component';
     ToggleButtonDirective,
     ToggleParaComponent,
     ToggleParaWithStatsComponent,
-    InputDirective,
+    DateInputDirective,
     TocSimpleComponent,
   ],
   imports: [

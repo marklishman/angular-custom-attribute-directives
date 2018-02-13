@@ -3,7 +3,7 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 @Directive({
   selector: 'input[type="date"]'
 })
-export class InputDirective {
+export class DateInputDirective {
 
   private showBorder: boolean;
 
