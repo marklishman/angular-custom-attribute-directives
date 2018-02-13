@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <header>Hover your mouse over the paragraphs to see the stats</header>
-    <p appToggle appStats *ngFor="let para of paras">
+    <p appToggle [appStats]="para" *ngFor="let para of paras">
       {{para}}
     </p>
   `,

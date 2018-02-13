@@ -1,19 +1,20 @@
-import { AfterViewInit, Directive, ElementRef, Renderer2 } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appStats]'
 })
 export class StatsDirective implements AfterViewInit {
 
+  @Input('appStats') text: string;
+
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2) {
   }
 
   ngAfterViewInit(): void {
-    const text = this.elementRef.nativeElement.innerText;
-    const stats = `Words: ${text.split(' ').length}\n` +
-      `Characters (with spaces): ${text.length}\n` +
-      `Characters (no spaces): ${text.replace(/ /g, '').length} `;
+    const stats = `Words: ${this.text.split(' ').length}\n` +
+      `Characters (with spaces): ${this.text.length}\n` +
+      `Characters (no spaces): ${this.text.replace(/ /g, '').length} `;
     this.renderer.setProperty(this.elementRef.nativeElement, 'title', stats);
   }
 
