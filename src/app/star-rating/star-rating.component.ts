@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
   template: `
     <header>Click on the stars to rate the movie</header>
     <div class="container">
-    <div appStarRating *ngFor="let movie of movies">
+      <div appStarRating *ngFor="let movie of movies">
         <img src="{{root}}/assets/images/{{movie}}.jpg">
       </div>
     </div>

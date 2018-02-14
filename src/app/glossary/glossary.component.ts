@@ -5,7 +5,9 @@ import { GlossaryTerm } from './glossary-term';
   selector: 'app-glossary',
   template: `
     <header>Hover your mouse over the colored text to see a definition</header>
-    <p [appGlossary]="techieText" [glossary]="glossaryTerms"></p>
+    <p [appGlossary]="glossaryTerms">
+      {{techieText}}
+    </p>
   `
 })
 export class GlossaryComponent {

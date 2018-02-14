@@ -22,7 +22,7 @@ export class TextHighlightDirective implements OnChanges {
     const color = this.highlightColor || 'yellow';
     const html = text.replace(
       searchTerm,
-      `<span style="background-color: ${color};">${this.textToHighlight}</span>`
+      `<mark style="background-color: ${color};">${this.textToHighlight}</mark>`
     );
     this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', html);
   }

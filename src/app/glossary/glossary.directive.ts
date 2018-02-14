@@ -1,19 +1,21 @@
-import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, HostBinding, Input, OnInit, Renderer2 } from '@angular/core';
 import { GlossaryTerm } from './glossary-term';
 
 @Directive({
   selector: '[appGlossary]'
 })
-export class GlossaryDirective implements OnInit {
+export class GlossaryDirective implements AfterViewInit {
 
-  @Input('appGlossary') private text: string;
-  @Input() private glossary: GlossaryTerm[];
+  @Input('appGlossary') glossary;
+  private text: string;
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2) {
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    this.text = this.elementRef.nativeElement.innerText;
+
     this.glossary.forEach(
       (glossaryTerm) => this.substituteTerms(
         glossaryTerm.term,

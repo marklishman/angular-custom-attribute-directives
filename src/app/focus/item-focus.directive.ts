@@ -9,7 +9,6 @@ export class ItemFocusDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    const inputField: HTMLInputElement = this.elementRef.nativeElement;
-    inputField.focus();
+    this.elementRef.nativeElement.focus();
   }
 }
