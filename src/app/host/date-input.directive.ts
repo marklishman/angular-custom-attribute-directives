@@ -38,8 +38,8 @@ export class DateInputDirective {
   @HostListener('click', ['$event'])
   @HostListener('dblclick', ['$event'])
   @HostListener('contextmenu', ['$event'])
-  private onMouseClicks() {
-    if (event.type === 'contextmenu') {
+  private onMouseClicks(mouseClick: MouseEvent) {
+    if (mouseClick.type === 'contextmenu') {
       alert('Context menu is not supported');
       return false;
     }
