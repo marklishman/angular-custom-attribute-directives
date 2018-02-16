@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       Enter some text such as 'rule' or 'Club' to highlight (case sensitive)
     </header>
     <div>
-      <input #input
+      <input #text
              (keyup)="0"
              type="text"
              placeholder="enter text to highlight">
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
         <option value="lightgreen">Green</option>
       </select>
     </div>
-    <p [appTextHighlight]="input.value" [highlightColor]="color.value">
+    <p [appTextHighlight]="text.value" [highlightColor]="color.value">
       {{movieQuote}}
     </p>
   `

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <header [hidden]="!quote.snippets.length">Select some more to add to the list</header>
     <p appTextSelector
        #quote="appTextSelector"
-       (selected)="onSelected($event)">
+       (textSelected)="onSelected($event)">
       {{movieQuote}}
     </p>
     <p>Last selection: <em>{{text || 'none'}}</em></p>
