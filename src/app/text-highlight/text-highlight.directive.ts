@@ -17,13 +17,11 @@ export class TextHighlightDirective implements OnChanges {
       return;
     }
 
-    const text = this.elementRef.nativeElement.innerText;
-    const searchTerm = new RegExp(this.textToHighlight, 'g');
+    const innerText = this.elementRef.nativeElement.innerText;
     const color = this.highlightColor || 'yellow';
-    const html = text.replace(
-      searchTerm,
-      `<mark style="background-color: ${color};">${this.textToHighlight}</mark>`
-    );
+    const html = innerText
+      .split(this.textToHighlight)
+      .join(`<mark style="background-color: ${color};">${this.textToHighlight}</mark>`);
     this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', html);
   }
 }
