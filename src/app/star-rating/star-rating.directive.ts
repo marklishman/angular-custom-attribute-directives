@@ -47,6 +47,14 @@ export class StarRatingDirective implements OnInit {
     this.renderer.addClass(starEl, 'selected');
   }
 
+  private createStarElement(): HTMLSpanElement {
+    const span = this.renderer.createElement('span');
+    this.renderer.setAttribute(span, 'data-pos', this.seq.next().value.toString());
+    this.renderer.addClass(span, 'star');
+    this.unselectStar(span);
+    return span;
+  }
+
   private unselectStar(starEl: HTMLSpanElement): void {
     this.setStarChar(starEl, '&star;');
     this.renderer.removeClass(starEl, 'selected');
@@ -54,14 +62,6 @@ export class StarRatingDirective implements OnInit {
 
   private setStarChar(starEl: HTMLSpanElement, starChar: string): void {
     this.renderer.setProperty(starEl, 'innerHTML', starChar);
-  }
-
-  private createStarElement(): HTMLSpanElement {
-    const span = this.renderer.createElement('span');
-    this.renderer.setAttribute(span, 'data-pos', this.seq.next().value.toString());
-    this.renderer.addClass(span, 'star');
-    this.unselectStar(span);
-    return span;
   }
 }
 

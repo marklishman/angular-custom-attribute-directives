@@ -6,7 +6,7 @@ import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } fro
 export class TextHighlightDirective implements OnChanges {
 
   @Input('appTextHighlight') textToHighlight: string;
-  @Input() highlightColor: string;
+  @Input() highlightColor = 'yellow';
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2) {
@@ -18,10 +18,9 @@ export class TextHighlightDirective implements OnChanges {
     }
 
     const innerText = this.elementRef.nativeElement.innerText;
-    const color = this.highlightColor || 'yellow';
     const html = innerText
       .split(this.textToHighlight)
-      .join(`<mark style="background-color: ${color};">${this.textToHighlight}</mark>`);
+      .join(`<mark style="background-color: ${this.highlightColor};">${this.textToHighlight}</mark>`);
     this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', html);
   }
 }
