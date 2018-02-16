@@ -1,4 +1,4 @@
-import { AfterViewInit, Directive, ElementRef, HostBinding, Input, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 import { GlossaryTerm } from './glossary-term';
 
 @Directive({
@@ -6,7 +6,7 @@ import { GlossaryTerm } from './glossary-term';
 })
 export class GlossaryDirective implements AfterViewInit {
 
-  @Input('appGlossary') glossary;
+  @Input('appGlossary') glossary: GlossaryTerm[];
   private text: string;
 
   constructor(private elementRef: ElementRef,
