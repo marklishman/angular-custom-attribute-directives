@@ -3,31 +3,25 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-host',
   template: `
-    <header [hidden]="show.innerText === 'Hide'">
-        Click in the box to change hover color, double click to remove hover color
-    </header>
-    <header [hidden]="show.innerText === 'Show'">
-        Enter a date field to see the border, press 'esc' key to remove the border
-    </header>
-    <article>
+    <header [hidden]="show">Click in the box to change hover color, double click to remove.</header>
+    <header [hidden]="!show">Enter an input field to see the border, press 'esc' key to remove.</header>
+    <main>
       <section class="container border">
         <input type="date">
         <input type="date">
       </section>
       <section>
         <p>
-          <button #show
-                  id="show"
-                  (click)="show.innerText = show.innerText === 'Show' ? 'Hide' : 'Show'">
-            Show
+          <button id="show" (click)="show = !show">
+            {{show ? 'Hide' : 'Show'}}
           </button>
         </p>
         <header>Click the button</header>
       </section>
-    </article>
+    </main>
   `,
   styles: [`
-    article {
+    main {
       display: flex;
       align-items: center;
     }
@@ -42,4 +36,5 @@ import { Component } from '@angular/core';
   `]
 })
 export class HostComponent {
+  show: boolean;
 }

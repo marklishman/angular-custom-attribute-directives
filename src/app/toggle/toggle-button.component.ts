@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-toggle-button',
   template: `
-    <header>Toggle the button below</header>
+    <header>Toggle the button below.</header>
     <p>
       <button appToggle>Click me!</button>
     </p>
