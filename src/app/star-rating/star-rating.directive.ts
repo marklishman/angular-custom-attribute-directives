@@ -29,40 +29,40 @@ export class StarRatingDirective implements OnInit {
 
   @HostListener('click', ['$event.target'])
   onClick(target: HTMLElement) {
-    if (! target.classList.contains('star')) {
-      return;
-    }
-
+    if (! target.classList.contains('star')) { return; }
     const selectedStarPos = +target.getAttribute('data-pos');
-    this.starElements
-      .forEach( starEl => {
-          +starEl.getAttribute('data-pos') <= selectedStarPos ?
-            this.selectStar(starEl) :
-            this.unselectStar(starEl);
-        }
-      );
+    this.setStarGroupState(selectedStarPos);
+  }
+
+  @HostListener('dblclick', ['$event.target'])
+  onDoubleClick(target: HTMLElement) {
+    if (target.nodeName !== 'IMG') { return; }
+    this.setStarGroupState();
   }
 
   private createStarElement(): HTMLSpanElement {
     const span = this.renderer.createElement('span');
     this.renderer.setAttribute(span, 'data-pos', this.seq.next().value.toString());
     this.renderer.addClass(span, 'star');
-    this.unselectStar(span);
+    this.setStarState(span, false);
     return span;
   }
 
-  private selectStar(starEl: HTMLSpanElement): void {
-    this.setStarChar(starEl, '&starf;');
-    this.renderer.addClass(starEl, 'selected');
+  private setStarGroupState(selectedStarCount = -1): void {
+    this.starElements
+      .forEach( starEl =>
+        this.setStarState(
+          starEl,
+          +starEl.getAttribute('data-pos') <= selectedStarCount
+        )
+      );
   }
 
-  private unselectStar(starEl: HTMLSpanElement): void {
-    this.setStarChar(starEl, '&star;');
-    this.renderer.removeClass(starEl, 'selected');
-  }
-
-  private setStarChar(starEl: HTMLSpanElement, starChar: string): void {
-    this.renderer.setProperty(starEl, 'innerHTML', starChar);
+  private setStarState(starEl: HTMLSpanElement, isSet: boolean): void {
+    this.renderer.setProperty(starEl, 'innerHTML', isSet ? '&starf;' : '&star;');
+    isSet ?
+      this.renderer.addClass(starEl, 'selected') :
+      this.renderer.removeClass(starEl, 'selected');
   }
 }
 

@@ -5,14 +5,14 @@ import { environment } from '../../environments/environment';
   selector: 'app-star-rating',
   template: `
     <header>Click on the stars to rate the movie</header>
-    <div class="container">
+    <main>
       <div [appStarRating]="5" *ngFor="let movie of movies">
         <img src="{{root}}/assets/images/{{movie}}.jpg">
       </div>
-    </div>
+    </main>
   `,
   styles: [`
-    .container {
+    main {
       display: flex;
     }
     .star {
