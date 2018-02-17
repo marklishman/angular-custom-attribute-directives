@@ -4,7 +4,9 @@ import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-star-rating',
   template: `
-    <header>Click on the stars to rate the movie, double click the image to remove selected stars</header>
+    <header>
+      Click on the stars to rate the movie, double click the image to remove selected stars
+    </header>
     <main>
       <div [appStarRating]="5" *ngFor="let movie of movies">
         <img src="{{root}}/assets/images/{{movie}}.jpg">
