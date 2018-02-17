@@ -13,14 +13,13 @@ export class TextHighlightDirective implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!this.elementRef.nativeElement.innerText) {
-      return;
-    }
+    if (!this.elementRef.nativeElement.innerText) { return; }
 
     const innerText = this.elementRef.nativeElement.innerText;
+    const markElement = `<mark style="background-color: ${this.highlightColor};">${this.textToHighlight}</mark>`;
     const html = innerText
       .split(this.textToHighlight)
-      .join(`<mark style="background-color: ${this.highlightColor};">${this.textToHighlight}</mark>`);
+      .join(markElement);
     this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', html);
   }
 }
