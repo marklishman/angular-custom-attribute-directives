@@ -25,7 +25,7 @@ export class GlossaryComponent {
   glossaryTerms: {[term: string]: string} = {
     'JavaScript':   'A high-level, dynamic, weakly typed, prototype-based, multi-paradigm, ' +
                     'and interpreted programming language.',
-    'Node.js':      'Node.js® is a JavaScript runtime built on Chrome\'s V8 JavaScript engine.',
+    'Node.js':      'Node.js is a JavaScript runtime built on Chrome\'s V8 JavaScript engine.',
     'open-source':  'Software for which the original source code is made freely available and ' +
                     'may be redistributed and modified.',
     'superset':     'A group of commands or functions that exceed the capabilities of the ' +

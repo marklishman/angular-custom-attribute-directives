@@ -1,11 +1,12 @@
-import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appStarRating]'
 })
 export class StarRatingDirective implements OnInit {
 
-  private static readonly numberOfStars = 5;
+  @Input('appStarRating') numberOfStars = 3;
+
   private seq: IterableIterator<number> = seqGen(0);
   private starElements: HTMLSpanElement[];
 
@@ -14,7 +15,7 @@ export class StarRatingDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    this.starElements = [...Array(StarRatingDirective.numberOfStars).keys()]
+    this.starElements = [...Array(this.numberOfStars)]
       .map( () => this.createStarElement());
 
     const starGroup = this.renderer.createElement('section');
@@ -42,17 +43,17 @@ export class StarRatingDirective implements OnInit {
       );
   }
 
-  private selectStar(starEl: HTMLSpanElement): void {
-    this.setStarChar(starEl, '&starf;');
-    this.renderer.addClass(starEl, 'selected');
-  }
-
   private createStarElement(): HTMLSpanElement {
     const span = this.renderer.createElement('span');
     this.renderer.setAttribute(span, 'data-pos', this.seq.next().value.toString());
     this.renderer.addClass(span, 'star');
     this.unselectStar(span);
     return span;
+  }
+
+  private selectStar(starEl: HTMLSpanElement): void {
+    this.setStarChar(starEl, '&starf;');
+    this.renderer.addClass(starEl, 'selected');
   }
 
   private unselectStar(starEl: HTMLSpanElement): void {
