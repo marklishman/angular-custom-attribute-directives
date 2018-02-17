@@ -6,7 +6,7 @@ import { GlossaryTerm } from './glossary-term';
 })
 export class GlossaryDirective implements AfterViewInit {
 
-  @Input('appGlossary') glossary: GlossaryTerm[];
+  @Input('appGlossary') glossary: {[term: string]: string};
   private text: string;
 
   constructor(private elementRef: ElementRef,
@@ -15,23 +15,28 @@ export class GlossaryDirective implements AfterViewInit {
 
   ngAfterViewInit() {
     this.text = this.elementRef.nativeElement.innerText;
+    const root = this.renderer.selectRootElement(this.elementRef.nativeElement);
 
-    this.glossary.forEach(
-      (glossaryTerm) => this.substituteTerms(
-        glossaryTerm.term,
-        glossaryTerm.definition
-      )
-    );
+    const terms = Object.keys(this.glossary);
+    const term = new RegExp(`(${terms.join('|')})`, 'g');
 
-    this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', this.text);
+    this.text
+      .split(term)
+      .forEach( item => {
+        const section = terms.includes(item) ?
+            this.createTermSpan(item) :
+            this.renderer.createText(item);
+        this.renderer.appendChild(root, section);
+      });
   }
 
-  private substituteTerms(term: string, definition: string): void {
-    const searchTerm = new RegExp(term, 'g');
-    this.text = this.text.replace(
-      searchTerm,
-      `<span style="color: tomato; cursor: pointer;" title="${definition}">${term}</span>`
-    );
+  private createTermSpan(term: string): HTMLSpanElement {
+    const span = this.renderer.createElement('span');
+    const text = this.renderer.createText(term);
+    this.renderer.appendChild(span, text);
+    this.renderer.setStyle(span, 'color', 'tomato');
+    this.renderer.setStyle(span, 'cursor', 'pointer');
+    this.renderer.setProperty(span, 'title', this.glossary[term]);
+    return span;
   }
-
 }

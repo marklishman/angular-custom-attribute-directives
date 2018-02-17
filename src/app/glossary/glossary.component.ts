@@ -23,22 +23,36 @@ export class GlossaryComponent {
       JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript
       programs are also valid TypeScript programs.`;
 
-  glossaryTerms: GlossaryTerm[] = [
-    new GlossaryTerm(
-      'JavaScript',
-      'A high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.'
-    ),
-    new GlossaryTerm(
-      'Node.js',
-      'Node.js® is a JavaScript runtime built on Chrome\'s V8 JavaScript engine.'
-    ),
-    new GlossaryTerm(
-      'open-source',
-      'Software for which the original source code is made freely available and may be redistributed and modified.'
-    ),
-    new GlossaryTerm(
-      'superset',
-      'A group of commands or functions that exceed the capabilities of the original specification.'
-    )
-  ];
+  // glossaryTerms: GlossaryTerm[] = [
+  //   new GlossaryTerm(
+  //     'JavaScript',
+  //     'A high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.'
+  //   ),
+  //   new GlossaryTerm(
+  //     'Node.js',
+  //     'Node.js® is a JavaScript runtime built on Chrome\'s V8 JavaScript engine.'
+  //   ),
+  //   new GlossaryTerm(
+  //     'open-source',
+  //     'Software for which the original source code is made freely available and may be redistributed and modified.'
+  //   ),
+  //   new GlossaryTerm(
+  //     'superset',
+  //     'A group of commands or functions that exceed the capabilities of the original specification.'
+  //   )
+  // ];
+
+  glossaryTerms: {[term: string]: string} = {
+    'JavaScript': 'A high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.',
+    'Node.js': 'Node.js® is a JavaScript runtime built on Chrome\'s V8 JavaScript engine.',
+    'open-source': 'Software for which the original source code is made freely available and may be redistributed and modified.',
+    'superset': 'A group of commands or functions that exceed the capabilities of the original specification.',
+  };
+
+  // glossaryTerms: Map<String, String> = new Map<String, String>([
+  //   ['JavaScript', 'A high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.'],
+  //   ['Node.js', 'Node.js® is a JavaScript runtime built on Chrome\'s V8 JavaScript engine.'],
+  //   ['open-source', 'Software for which the original source code is made freely available and may be redistributed and modified.'],
+  //   ['superset', 'A group of commands or functions that exceed the capabilities of the original specification.']
+  // ]);
 }
