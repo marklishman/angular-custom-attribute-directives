@@ -33,5 +33,4 @@ export class ConfirmComponent {
   setBoxColor(color: string) {
     return () => this.boxColor = color;
   }
-
 }

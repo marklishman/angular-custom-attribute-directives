@@ -26,5 +26,4 @@ export class TextSnippetDirective {
   clear(): void {
     this._snippets = [];
   }
-
 }

@@ -46,5 +46,4 @@ export class TextSnippetComponent {
   onSelected(text: string) {
     this.text = text;
   }
-
 }
