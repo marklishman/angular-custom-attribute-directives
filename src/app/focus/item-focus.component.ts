@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-item-focus',
   template: `
-    <header>Focus is on the second input</header>
+    <header>Focus is on the second input.</header>
     <form>
       One: <input type="text">
       Two: <input appFocus type="text">

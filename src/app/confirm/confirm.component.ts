@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-confirm',
   template: `
-    <header>Click the buttons to see the confirmation message</header>
+    <header>Click the buttons to see the confirmation message.</header>
     <p>
       <button [appConfirm]="'Are you sure you want to change the color to blue?'"
               [functionToRun]="setBoxColor('dodgerblue')"

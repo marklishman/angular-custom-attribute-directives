@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <header>Hover your mouse over the paragraphs to see the stats</header>
+    <header>Hover your mouse over the paragraphs to see the stats.</header>
     <p appToggle [appStats]="para" *ngFor="let para of paras">
       {{para}}
     </p>

@@ -3,14 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-glossary',
   template: `
-    <header>Hover your mouse over the colored text to see a definition</header>
+    <header>Hover your mouse over the colored text to see a definition.</header>
     <p [appGlossary]="glossaryTerms">
       {{techieText}}
     </p>
   `
 })
 export class GlossaryComponent {
-
   techieText = `
       TypeScript is a free and open-source programming language developed
       and maintained by Microsoft. It is a strict syntactical superset of

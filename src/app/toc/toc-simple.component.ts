@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-toc-simple',
   template: `
-    <header>Hover your mouse over the text above to see the TOC</header>
+    <header>Hover your mouse over the text above to see the TOC.</header>
     <div appToc>
 
       <h1>Angular Property Binding</h1>

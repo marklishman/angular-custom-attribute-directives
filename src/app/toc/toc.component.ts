@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-toc',
   template: `
-    <header>Hover your mouse over the text above to see the TOC</header>
+    <header>Hover your mouse over the text above to see the TOC.</header>
     <div appToc>
       <h1>first heading 1</h1>
       <h2>first heading 2</h2>

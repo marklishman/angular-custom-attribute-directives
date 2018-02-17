@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <header>
-      Enter some text such as 'rule' or 'Club' to highlight (case sensitive)
+      Enter some text such as 'rule' or 'Club' to highlight (case sensitive).
     </header>
     <div>
       <input #text
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
         <option value="lightgreen">Green</option>
       </select>
     </div>
-    <p [appTextHighlight]="text.value" [highlightColor]="color.value">
+    <p [appTextHighlight]="text.value" [color]="color.value">
       {{movieQuote}}
     </p>
   `

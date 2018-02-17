@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-text-selector',
   template: `
-    <header [hidden]="quote.snippets.length">Select some of the text below</header>
-    <header [hidden]="!quote.snippets.length">Select some more to add to the list</header>
+    <header [hidden]="quote.snippets.length">Select some of the text below.</header>
+    <header [hidden]="!quote.snippets.length">Select some more to add to the list.</header>
     <p appTextSelector
        #quote="appTextSelector"
        (textSelected)="onSelected($event)">
