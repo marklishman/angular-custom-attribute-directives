@@ -29,7 +29,7 @@ export class DateInputDirective {
   }
 
   @HostListener('keydown', ['$event'])
-  private onKeyUp(event: KeyboardEvent) {
+  private onKeyDown(event: KeyboardEvent) {
     if (event.key === 'Escape') {
       this.showBorder = false;
     }
